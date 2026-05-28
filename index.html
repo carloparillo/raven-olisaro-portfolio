@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raven Olisaro — Photography</title>
+  <meta name="description" content="Raven Olisaro photography portfolio: urban silence, architecture, thresholds and human traces.">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta property="og:title" content="Raven Olisaro — Photography">
+  <meta property="og:description" content="Urban silence, architecture, thresholds and human traces.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --panel: #111;
+      --text: #eeeeee;
+      --muted: #9b9b9b;
+      --line: rgba(255,255,255,.14);
+      --soft: rgba(255,255,255,.06);
+      --max: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: -0.01em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px clamp(18px, 4vw, 56px);
+      background: linear-gradient(to bottom, rgba(11,11,11,.86), rgba(11,11,11,.38), transparent);
+      backdrop-filter: blur(6px);
+    }
+
+    .brand {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .nav a {
+      transition: color .2s ease;
+    }
+
+    .nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: end;
+      gap: clamp(28px, 5vw, 80px);
+      padding: 124px clamp(18px, 5vw, 72px) 56px;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .hero-copy {
+      padding-bottom: clamp(22px, 5vw, 72px);
+    }
+
+    .eyebrow {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(48px, 8vw, 118px);
+      line-height: .92;
+      letter-spacing: -0.07em;
+      font-weight: 640;
+    }
+
+    .intro {
+      max-width: 540px;
+      color: #c7c7c7;
+      font-size: clamp(17px, 2vw, 23px);
+      line-height: 1.45;
+      margin-top: 28px;
+    }
+
+    .hero-image {
+      align-self: center;
+      min-height: min(72vh, 760px);
+      background: #161616;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      min-height: min(72vh, 760px);
+      object-fit: cover;
+      filter: contrast(1.05);
+    }
+
+    main {
+      border-top: 1px solid var(--line);
+    }
+
+    .section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: clamp(72px, 10vw, 132px) clamp(18px, 4vw, 42px);
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 32px;
+      margin-bottom: 44px;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .section-header p {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(24px, 4vw, 48px);
+      line-height: 1.04;
+      letter-spacing: -0.055em;
+    }
+
+    .gallery {
+      columns: 3 280px;
+      column-gap: 18px;
+    }
+
+    .work {
+      break-inside: avoid;
+      position: relative;
+      margin: 0 0 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      cursor: zoom-in;
+    }
+
+    .work img {
+      width: 100%;
+      height: auto;
+      transform: scale(1);
+      transition: transform .45s ease, filter .45s ease;
+      filter: saturate(.88) contrast(1.02);
+    }
+
+    .work:hover img {
+      transform: scale(1.025);
+      filter: saturate(.96) contrast(1.08);
+    }
+
+    .caption {
+      padding: 14px 14px 16px;
+      border-top: 1px solid var(--line);
+      background: rgba(0,0,0,.34);
+    }
+
+    .caption strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 560;
+    }
+
+    .caption span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .statement {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+      gap: clamp(28px, 5vw, 80px);
+      align-items: start;
+    }
+
+    .statement blockquote {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -0.06em;
+    }
+
+    .statement aside {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      border-left: 1px solid var(--line);
+      padding-left: 24px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: clamp(28px, 6vw, 96px);
+      align-items: start;
+    }
+
+    .about-card {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      padding: 22px;
+    }
+
+    .about-card img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      filter: grayscale(1) contrast(1.08);
+    }
+
+    .about-text p {
+      margin: 0 0 18px;
+      color: #d6d6d6;
+      font-size: clamp(18px, 2.4vw, 30px);
+      line-height: 1.28;
+      letter-spacing: -0.035em;
+    }
+
+    .contact-line {
+      margin-top: 34px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .contact-line a {
+      color: var(--text);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 40px clamp(18px, 4vw, 42px) 56px;
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background: rgba(0,0,0,.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-height: 88vh;
+      max-width: 92vw;
+      object-fit: contain;
+    }
+
+    .lightbox button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        position: absolute;
+        align-items: flex-start;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px 16px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero-copy {
+        padding-bottom: 0;
+      }
+
+      .hero-image,
+      .hero-image img {
+        min-height: 420px;
+      }
+
+      .section-header,
+      .statement,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        columns: 1;
+      }
+
+      .site-footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">Raven Olisaro</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#direction">Direction</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-copy">
+      <div class="eyebrow">Photography · Urban silence · Human traces</div>
+      <h1>Light, silence, memory.</h1>
+      <p class="intro">A restrained photographic selection focused on urban spaces, architectural thresholds and the quiet distance between places and people.</p>
+    </div>
+    <div class="hero-image">
+      <img src="https://static.wixstatic.com/media/1de872_aa9aaf116ed540e9ab03f14f3488543e~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_aa9aaf116ed540e9ab03f14f3488543e~mv2.jpg" alt="Black and white nocturnal street photograph" loading="eager">
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="work">
+      <div class="section-header">
+        <h2>Selected Works</h2>
+        <p>Fewer images, stronger direction: nocturnal streets, architectural silence, interiors seen from the edge.</p>
+      </div>
+
+      <div class="gallery">
+        
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_aa9aaf116ed540e9ab03f14f3488543e~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_aa9aaf116ed540e9ab03f14f3488543e~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_aa9aaf116ed540e9ab03f14f3488543e~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_aa9aaf116ed540e9ab03f14f3488543e~mv2.jpg" alt="Night road — Urban Silence" loading="lazy">
+          <figcaption class="caption">
+            <strong>Night road</strong>
+            <span>Urban Silence · Nocturnal street, black and white, architectural silence.</span>
+          </figcaption>
+        </figure>
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_91b2152220b74deab3682f5886183dd0~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_91b2152220b74deab3682f5886183dd0~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_91b2152220b74deab3682f5886183dd0~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_91b2152220b74deab3682f5886183dd0~mv2.jpg" alt="Interior shadows — Architecture" loading="lazy">
+          <figcaption class="caption">
+            <strong>Interior shadows</strong>
+            <span>Architecture · Light cutting through a dark architectural interior.</span>
+          </figcaption>
+        </figure>
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_cfe899b61a844358bfb322ca8e4f1222~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_cfe899b61a844358bfb322ca8e4f1222~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_cfe899b61a844358bfb322ca8e4f1222~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_cfe899b61a844358bfb322ca8e4f1222~mv2.jpg" alt="Yellow line — Architecture" loading="lazy">
+          <figcaption class="caption">
+            <strong>Yellow line</strong>
+            <span>Architecture · Minimal geometry and controlled color.</span>
+          </figcaption>
+        </figure>
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_133714a5f9a1426b95bcb8750c665de8~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_133714a5f9a1426b95bcb8750c665de8~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_133714a5f9a1426b95bcb8750c665de8~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_133714a5f9a1426b95bcb8750c665de8~mv2.jpg" alt="Gate — Thresholds" loading="lazy">
+          <figcaption class="caption">
+            <strong>Gate</strong>
+            <span>Thresholds · A threshold between interior darkness and exterior memory.</span>
+          </figcaption>
+        </figure>
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_4d97143e91dc4e38ac3736d00d8a633b~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_4d97143e91dc4e38ac3736d00d8a633b~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_4d97143e91dc4e38ac3736d00d8a633b~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_4d97143e91dc4e38ac3736d00d8a633b~mv2.jpg" alt="Tram line — Urban Silence" loading="lazy">
+          <figcaption class="caption">
+            <strong>Tram line</strong>
+            <span>Urban Silence · Urban axis, morning light, restrained human presence.</span>
+          </figcaption>
+        </figure>
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_57d5a24b1d7249288b4c133a7b9ba1d5~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_57d5a24b1d7249288b4c133a7b9ba1d5~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_57d5a24b1d7249288b4c133a7b9ba1d5~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_57d5a24b1d7249288b4c133a7b9ba1d5~mv2.jpg" alt="Blue bags — Street" loading="lazy">
+          <figcaption class="caption">
+            <strong>Blue bags</strong>
+            <span>Street · Human movement observed at distance.</span>
+          </figcaption>
+        </figure>
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_0593e5940e0c4fddac28af071c3dedec~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_0593e5940e0c4fddac28af071c3dedec~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_0593e5940e0c4fddac28af071c3dedec~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_0593e5940e0c4fddac28af071c3dedec~mv2.jpg" alt="Twin facades — Architecture" loading="lazy">
+          <figcaption class="caption">
+            <strong>Twin facades</strong>
+            <span>Architecture · Symmetry, distance, civic architecture.</span>
+          </figcaption>
+        </figure>
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_32dde05d967447b4a0964ad632ae9725~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_32dde05d967447b4a0964ad632ae9725~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_32dde05d967447b4a0964ad632ae9725~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_32dde05d967447b4a0964ad632ae9725~mv2.jpg" alt="Evening structure — Architecture" loading="lazy">
+          <figcaption class="caption">
+            <strong>Evening structure</strong>
+            <span>Architecture · Silhouette, dusk, structural memory.</span>
+          </figcaption>
+        </figure>
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_83a049a8206e4660a2c3747a027314fd~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_83a049a8206e4660a2c3747a027314fd~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_83a049a8206e4660a2c3747a027314fd~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_83a049a8206e4660a2c3747a027314fd~mv2.jpg" alt="Glasshouse — Architecture" loading="lazy">
+          <figcaption class="caption">
+            <strong>Glasshouse</strong>
+            <span>Architecture · Glass, water, institutional stillness.</span>
+          </figcaption>
+        </figure>
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_b0e9b97b3e5f4cf0aadcb513d4b9e1f8~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_b0e9b97b3e5f4cf0aadcb513d4b9e1f8~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_b0e9b97b3e5f4cf0aadcb513d4b9e1f8~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_b0e9b97b3e5f4cf0aadcb513d4b9e1f8~mv2.jpg" alt="The clock — Geometry" loading="lazy">
+          <figcaption class="caption">
+            <strong>The clock</strong>
+            <span>Geometry · Vertical perspective, mechanical light.</span>
+          </figcaption>
+        </figure>
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_df8bf9e8e1e0459aa9daf8b2f36a0010~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_df8bf9e8e1e0459aa9daf8b2f36a0010~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_df8bf9e8e1e0459aa9daf8b2f36a0010~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_df8bf9e8e1e0459aa9daf8b2f36a0010~mv2.jpg" alt="Dancing House — Architecture" loading="lazy">
+          <figcaption class="caption">
+            <strong>Dancing House</strong>
+            <span>Architecture · Graphic black and white city form.</span>
+          </figcaption>
+        </figure>
+        <figure class="work" data-full="https://static.wixstatic.com/media/1de872_e1e852e12c6a45368581bd5775183d0c~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_e1e852e12c6a45368581bd5775183d0c~mv2.jpg">
+          <img src="https://static.wixstatic.com/media/1de872_e1e852e12c6a45368581bd5775183d0c~mv2.jpg/v1/fit/w_1200,h_1200,q_90/1de872_e1e852e12c6a45368581bd5775183d0c~mv2.jpg" alt="Black tower — Architecture" loading="lazy">
+          <figcaption class="caption">
+            <strong>Black tower</strong>
+            <span>Architecture · Minimal form against landscape.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="direction">
+      <div class="statement">
+        <blockquote>Urban silence. Architecture as memory. People as traces.</blockquote>
+        <aside>
+          <p>The strongest direction is not generic travel photography, wildlife or landscape. The clearest visual identity comes from spaces that feel suspended: gates, facades, corridors, streets, windows and figures observed indirectly.</p>
+          <p>This version is intentionally lean. It removes weaker categories and positions the work as a coherent photographic research rather than a broad archive.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="about">
+        <div class="about-card">
+          <img src="https://static.wixstatic.com/media/1de872_1d71feb188b44096b88ed0d60dbc878b~mv2.png/v1/fill/w_900,h_900,al_c,q_85/Raven%20Olisaro.png" alt="Raven Olisaro visual identity">
+        </div>
+        <div class="about-text">
+          <h2>About</h2>
+          <p>Raven Olisaro moves between light and silence.</p>
+          <p>Stories are never told — only found, in the blur between what is seen and what remains.</p>
+          <p>No place is fixed, no moment repeats. The lens does not capture — it remembers.</p>
+          <div class="contact-line">
+            Contact: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+            Instagram: <a href="https://www.instagram.com/" target="_blank" rel="noopener">add your profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Raven Olisaro</span>
+    <span>Static portfolio for GitHub Pages</span>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" aria-label="Close image">×</button>
+    <img src="" alt="">
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = lightbox.querySelector("img");
+    const closeButton = lightbox.querySelector("button");
+
+    document.querySelectorAll(".work").forEach((item) => {
+      item.addEventListener("click", () => {
+        const img = item.querySelector("img");
+        lightboxImage.src = item.dataset.full;
+        lightboxImage.alt = img.alt;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+    }
+
+    closeButton.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeLightbox();
+    });
+  </script>
+</body>
+</html>
