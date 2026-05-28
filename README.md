@@ -66,3 +66,8 @@ Replace this file if you want to update the logo.
 - Confirmed contact details:
   - Email: karloparillo@gmail.com
   - Instagram: https://www.instagram.com/ravenolisaro/
+
+
+## Latest cover edit
+
+- Set cover image to `Green Silence`
