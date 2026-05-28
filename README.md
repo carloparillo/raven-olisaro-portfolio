@@ -97,3 +97,25 @@ After uploading, Chrome bookmarks should show the custom favicon. Link sharing p
 - Added updated browser favicon files
 - Added updated Apple / Android icons
 - Preserved Green Silence as homepage hero and social preview image
+
+
+## SEO / search engine readiness
+
+This package adds:
+
+- `sitemap.xml`
+- `robots.txt`
+- canonical URL
+- improved meta description
+- Open Graph / Twitter preview metadata
+- JSON-LD structured data for WebSite, Person and ImageGallery
+- improved image alt text
+- expanded About text with searchable context
+
+Recommended next steps after upload:
+
+1. Wait 1–5 minutes for GitHub Pages to update.
+2. Open: https://carloparillo.github.io/raven-olisaro-portfolio/sitemap.xml
+3. Open: https://carloparillo.github.io/raven-olisaro-portfolio/robots.txt
+4. Submit the sitemap in Google Search Console.
+5. Add the site link to Instagram bio, LinkedIn, and the old Wix site if possible.
