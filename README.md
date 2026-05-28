@@ -1,39 +1,41 @@
-# Raven Olisaro — GitHub Pages Portfolio
+# Raven Olisaro — Final GitHub Pages Portfolio
 
-Static photography portfolio designed for GitHub Pages.
+Static photography portfolio for GitHub Pages.
 
-## Files
+## Included files
 
-- `index.html`: complete one-page website with embedded CSS and JavaScript
-- no build tools required
-- no dependencies
-- works directly on GitHub Pages
+- `index.html`
+- `assets/images/`
+- optimized JPG images and thumbnails
 
-## How to publish on GitHub Pages
+## Image selection
 
-1. Create a new public repository on GitHub.
-2. Name it either:
-   - `ravenolisaro.github.io` for a user site, or
-   - any name you prefer, e.g. `raven-olisaro-portfolio`.
-3. Upload `index.html` to the repository root.
-4. Go to `Settings` → `Pages`.
-5. Under `Build and deployment`, select:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-6. Save.
-7. GitHub will generate the public site URL.
+This version contains 21 selected images.
 
-## Important
+## Publish / update on GitHub Pages
 
-This first version uses image URLs from the current Wix CDN. For a proper migration, replace those URLs with local files:
+1. Extract this ZIP.
+2. Open the repository on GitHub.
+3. Click `Add file` → `Upload files`.
+4. Upload:
+   - `index.html`
+   - the full `assets` folder
+   - this `README.md`
+5. Commit changes.
+6. Check GitHub Pages under `Settings` → `Pages`.
 
-- create an `assets/images/` folder
-- upload optimized JPG/WebP files
-- update the `src` fields in `index.html`
+If the site is already active, the update usually appears after 1–5 minutes.
 
-Recommended image export:
-- long edge: 1800–2400 px
-- quality: 80–90
-- format: JPG or WebP
-- keep file size preferably below 700 KB per image
+## Edit contact details
+
+Open `index.html` and replace:
+
+- `your.email@example.com`
+- `https://www.instagram.com/`
+- `add your profile`
+
+with the correct details.
+
+## Local preview
+
+Double-click `index.html` to preview the site locally before uploading.
