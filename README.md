@@ -71,3 +71,15 @@ Replace this file if you want to update the logo.
 ## Latest cover edit
 
 - Set cover image to `Green Silence`
+
+
+## Bookmark / preview icons added
+
+This package adds:
+- favicon (`favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`)
+- Apple touch icon (`apple-touch-icon.png`)
+- Android icons (`android-chrome-192x192.png`, `android-chrome-512x512.png`)
+- Open Graph / Twitter preview metadata using `Green Silence`
+- updated `manifest.json`
+
+After uploading, Chrome bookmarks should show the custom favicon. Link sharing previews should also improve, though browser-generated bookmark thumbnails are not fully controllable.
