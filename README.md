@@ -89,3 +89,11 @@ After uploading, Chrome bookmarks should show the custom favicon. Link sharing p
 
 - Forced the homepage hero / cover image to `Green Silence`
 - Preserved favicon, bookmark icons, manifest, logo and contact details
+
+
+## Latest favicon edit
+
+- Replaced the previous favicon with a stylized raven icon
+- Added updated browser favicon files
+- Added updated Apple / Android icons
+- Preserved Green Silence as homepage hero and social preview image
