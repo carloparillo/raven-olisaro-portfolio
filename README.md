@@ -83,3 +83,9 @@ This package adds:
 - updated `manifest.json`
 
 After uploading, Chrome bookmarks should show the custom favicon. Link sharing previews should also improve, though browser-generated bookmark thumbnails are not fully controllable.
+
+
+## Latest edit
+
+- Forced the homepage hero / cover image to `Green Silence`
+- Preserved favicon, bookmark icons, manifest, logo and contact details
