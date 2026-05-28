@@ -5,49 +5,49 @@
       "full": "assets/images/01-threshold-green.jpg",
       "thumb": "assets/images/01-threshold-green-thumb.jpg",
       "title": "Threshold",
-      "category": "Thresholds"
+      "category": "Places"
     },
     {
       "source": "_PIC2662.jpg",
       "full": "assets/images/02-yellow-line.jpg",
       "thumb": "assets/images/02-yellow-line-thumb.jpg",
       "title": "Yellow Line",
-      "category": "Geometry"
+      "category": "Places"
     },
     {
       "source": "_PIC2812.jpg",
       "full": "assets/images/03-griffin-room.jpg",
       "thumb": "assets/images/03-griffin-room-thumb.jpg",
       "title": "Griffin Room",
-      "category": "Ritual Spaces"
+      "category": "Places"
     },
     {
       "source": "_PIC2825.jpg",
       "full": "assets/images/04-stone-kitchen.jpg",
       "thumb": "assets/images/04-stone-kitchen-thumb.jpg",
       "title": "Stone Kitchen",
-      "category": "Memory Rooms"
+      "category": "Places"
     },
     {
       "source": "_PIC3178.jpg",
       "full": "assets/images/05-catacomb.jpg",
       "thumb": "assets/images/05-catacomb-thumb.jpg",
       "title": "Catacomb",
-      "category": "Memory Rooms"
+      "category": "Places"
     },
     {
       "source": "_PIC4520-Migliorato-NR.jpg",
       "full": "assets/images/06-green-silence.jpg",
       "thumb": "assets/images/06-green-silence-thumb.jpg",
       "title": "Green Silence",
-      "category": "Landscape"
+      "category": "Atmospheres"
     },
     {
       "source": "_PIC4751.jpg",
       "full": "assets/images/07-sea-rocks.jpg",
       "thumb": "assets/images/07-sea-rocks-thumb.jpg",
       "title": "Sea Rocks",
-      "category": "Landscape"
+      "category": "Atmospheres"
     },
     {
       "source": "_PIC5387.jpg",
@@ -61,7 +61,7 @@
       "full": "assets/images/09-flamingos.jpg",
       "thumb": "assets/images/09-flamingos-thumb.jpg",
       "title": "Laguna",
-      "category": "Landscape"
+      "category": "Atmospheres"
     },
     {
       "source": "_PIC6469.jpg",
@@ -71,18 +71,11 @@
       "category": "Human Traces"
     },
     {
-      "source": "_PIC6819-Migliorato-NR.jpg",
-      "full": "assets/images/11-yellow-structure.jpg",
-      "thumb": "assets/images/11-yellow-structure-thumb.jpg",
-      "title": "Yellow Structure",
-      "category": "Human Traces"
-    },
-    {
       "source": "_PIC6895.jpg",
       "full": "assets/images/12-snow-birds.jpg",
       "thumb": "assets/images/12-snow-birds-thumb.jpg",
       "title": "Snow Birds",
-      "category": "Landscape"
+      "category": "Atmospheres"
     },
     {
       "source": "2024_12_14_16_57_IMG_0922.jpg",
@@ -103,14 +96,14 @@
       "full": "assets/images/15-boudha-stupa.jpg",
       "thumb": "assets/images/15-boudha-stupa-thumb.jpg",
       "title": "Boudha Stupa",
-      "category": "Ritual Spaces"
+      "category": "Places"
     },
     {
       "source": "Dressing.jpg",
       "full": "assets/images/16-dressing.jpg",
       "thumb": "assets/images/16-dressing-thumb.jpg",
       "title": "Dressing",
-      "category": "Ritual Spaces"
+      "category": "Places"
     },
     {
       "source": "Freebird.jpg",

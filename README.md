@@ -54,3 +54,15 @@ Replace this file if you want to update the logo.
 
 - Email: karloparillo@gmail.com
 - Instagram: https://www.instagram.com/ravenolisaro/
+
+
+## Latest edits
+
+- Removed `Yellow Structure`
+- Simplified filters to `All`, `Places`, `Human Traces`, `Atmospheres`
+- Removed technical GitHub Pages wording from the footer
+- Shortened hero and direction copy
+- Reduced visible image captions
+- Confirmed contact details:
+  - Email: karloparillo@gmail.com
+  - Instagram: https://www.instagram.com/ravenolisaro/
