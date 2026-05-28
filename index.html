@@ -57,6 +57,19 @@
       text-transform: uppercase;
     }
 
+    .logo-brand {
+      display: inline-flex;
+      align-items: center;
+      width: 156px;
+      max-width: 42vw;
+    }
+
+    .logo-brand img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .nav {
       display: flex;
       gap: 22px;
@@ -468,7 +481,9 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top">Raven Olisaro</a>
+    <a class="brand logo-brand" href="#top" aria-label="Raven Olisaro home">
+      <img src="assets/images/raven-olisaro-logo-negative.png" alt="Raven Olisaro">
+    </a>
     <nav class="nav" aria-label="Primary navigation">
       <a href="#work">Work</a>
       <a href="#direction">Direction</a>
@@ -784,7 +799,7 @@
           <p>The work follows interiors, borders, traces of people and landscapes that seem to hold something back.</p>
           <div class="small-text">
             Contact: <a href="mailto:karloparillo@gmail.com">karloparillo@gmail.com</a><br>
-            Instagram: <a href="https://www.instagram.com/" target="_blank" rel="noopener">https://www.instagram.com/ravenolisaro/</a>
+            Instagram: <a href="https://www.instagram.com/ravenolisaro/ravenolisaro/" target="_blank" rel="noopener">@ravenolisaro</a>
           </div>
         </div>
       </div>

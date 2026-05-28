@@ -39,3 +39,18 @@ with the correct details.
 ## Local preview
 
 Double-click `index.html` to preview the site locally before uploading.
+
+
+## Logo
+
+The header uses:
+
+- `assets/images/raven-olisaro-logo-negative.png`
+
+Replace this file if you want to update the logo.
+
+
+## Contact details included
+
+- Email: karloparillo@gmail.com
+- Instagram: https://www.instagram.com/ravenolisaro/
