@@ -1,15 +1,14 @@
 {
   "name": "Raven Olisaro \u2014 The Trace Archive",
-  "short_name": "Trace Archive",
-  "start_url": "/raven-olisaro-portfolio/",
-  "display": "standalone",
-  "background_color": "#050606",
-  "theme_color": "#050606",
+  "short_name": "Raven Olisaro",
   "icons": [
     {
-      "src": "assets/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "assets/icons/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  ]
+  ],
+  "theme_color": "#050607",
+  "background_color": "#050607",
+  "display": "standalone"
 }
