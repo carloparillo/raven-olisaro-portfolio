@@ -167,3 +167,17 @@ Included changes:
 - made the gallery denser and more archive-like
 - updated About and CTA language
 - preserved current images, raven favicon, sitemap, robots.txt and SEO files
+
+
+## Latest bug fix
+
+Fixed archive filters:
+- converted thematic labels into clickable filter buttons
+- restored JavaScript filtering
+- added active/hover states
+- assigned works to coherent categories:
+  - Places
+  - Human Traces
+  - Ritual Spaces
+  - Atmospheres
+  - Urban Voids

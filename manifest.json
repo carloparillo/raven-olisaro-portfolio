@@ -12,28 +12,28 @@
       "full": "assets/images/02-yellow-line.jpg",
       "thumb": "assets/images/02-yellow-line-thumb.jpg",
       "title": "Yellow Line",
-      "category": "Places"
+      "category": "Urban Voids"
     },
     {
       "source": "_PIC2812.jpg",
       "full": "assets/images/03-griffin-room.jpg",
       "thumb": "assets/images/03-griffin-room-thumb.jpg",
       "title": "Griffin Room",
-      "category": "Places"
+      "category": "Ritual Spaces"
     },
     {
       "source": "_PIC2825.jpg",
       "full": "assets/images/04-stone-kitchen.jpg",
       "thumb": "assets/images/04-stone-kitchen-thumb.jpg",
       "title": "Stone Kitchen",
-      "category": "Places"
+      "category": "Ritual Spaces"
     },
     {
       "source": "_PIC3178.jpg",
       "full": "assets/images/05-catacomb.jpg",
       "thumb": "assets/images/05-catacomb-thumb.jpg",
       "title": "Catacomb",
-      "category": "Places"
+      "category": "Ritual Spaces"
     },
     {
       "source": "_PIC4520-Migliorato-NR.jpg",
@@ -61,7 +61,7 @@
       "full": "assets/images/10-salar-cactus.jpg",
       "thumb": "assets/images/10-salar-cactus-thumb.jpg",
       "title": "Salar",
-      "category": "Human Traces"
+      "category": "Atmospheres"
     },
     {
       "source": "_PIC6895.jpg",
@@ -82,21 +82,21 @@
       "full": "assets/images/14-ice-figure.jpg",
       "thumb": "assets/images/14-ice-figure-thumb.jpg",
       "title": "Ice Figure",
-      "category": "Human Traces"
+      "category": "Atmospheres"
     },
     {
       "source": "Boudha Stupa.jpg",
       "full": "assets/images/15-boudha-stupa.jpg",
       "thumb": "assets/images/15-boudha-stupa-thumb.jpg",
       "title": "Boudha Stupa",
-      "category": "Places"
+      "category": "Ritual Spaces"
     },
     {
       "source": "Dressing.jpg",
       "full": "assets/images/16-dressing.jpg",
       "thumb": "assets/images/16-dressing-thumb.jpg",
       "title": "Dressing",
-      "category": "Places"
+      "category": "Ritual Spaces"
     },
     {
       "source": "Freebird.jpg",
@@ -124,7 +124,7 @@
       "full": "assets/images/21-venus.jpg",
       "thumb": "assets/images/21-venus-thumb.jpg",
       "title": "Venus",
-      "category": "Atmospheres"
+      "category": "Places"
     },
     {
       "source": "_PIC6464.jpg",
@@ -138,7 +138,7 @@
       "full": "assets/images/23-urban-void.jpg",
       "thumb": "assets/images/23-urban-void-thumb.jpg",
       "title": "Urban Void",
-      "category": "Places"
+      "category": "Urban Voids"
     },
     {
       "source": "IMG_3245.jpg",

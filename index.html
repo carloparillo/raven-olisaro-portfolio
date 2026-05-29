@@ -66,6 +66,25 @@
     }
   ]
 }
+  
+    const filterButtons = document.querySelectorAll("[data-filter]");
+    const works = document.querySelectorAll(".work");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        works.forEach((work) => {
+          const show = filter === "all" || work.dataset.category === filter;
+          work.classList.toggle("is-hidden", !show);
+        });
+      });
+    });
+
+
   </script>
 
   <style>
@@ -230,7 +249,6 @@
       letter-spacing: -0.06em;
     }
 
-
     .archive-pills {
       display: flex;
       flex-wrap: wrap;
@@ -239,15 +257,30 @@
       color: var(--muted);
     }
 
-    .archive-pills span {
+    .archive-pills button {
       border: 1px solid var(--line);
       background: rgba(255,255,255,.03);
+      color: var(--muted);
       padding: 8px 11px;
       border-radius: 999px;
       font-size: 11px;
       letter-spacing: .12em;
       text-transform: uppercase;
+      cursor: pointer;
+      transition: border-color .2s ease, color .2s ease, background .2s ease;
     }
+
+    .archive-pills button:hover,
+    .archive-pills button.active {
+      color: var(--text);
+      border-color: rgba(255,255,255,.38);
+      background: rgba(255,255,255,.08);
+    }
+
+    .work.is-hidden {
+      display: none;
+    }
+
 
     .filters {
       display: flex;
@@ -616,13 +649,13 @@
         <h2>The Trace Archive</h2>
         <p>An evolving repository of selected photographs: places, figures, rituals, thresholds and atmospheric landscapes.</p>
       </div>
-      <div class="archive-pills" aria-label="Archive themes">
-        <span>Thresholds</span>
-        <span>Human Traces</span>
-        <span>Ritual Spaces</span>
-        <span>Silent Landscapes</span>
-        <span>Urban Voids</span>
-        <span>Memory Rooms</span>
+            <div class="archive-pills filters" aria-label="Archive filters">
+        <button type="button" class="active" data-filter="all">All</button>
+        <button type="button" data-filter="Places">Places</button>
+        <button type="button" data-filter="Human Traces">Human Traces</button>
+        <button type="button" data-filter="Ritual Spaces">Ritual Spaces</button>
+        <button type="button" data-filter="Atmospheres">Atmospheres</button>
+        <button type="button" data-filter="Urban Voids">Urban Voids</button>
       </div>
 
       <div class="gallery">
@@ -639,12 +672,12 @@
         </figure>
 
 
-        <figure class="work" data-category="Places" data-full="assets/images/05-catacomb.jpg">
+        <figure class="work" data-category="Ritual Spaces" data-full="assets/images/05-catacomb.jpg">
           <button class="image-button" type="button" aria-label="Open Catacomb">
             <img src="assets/images/05-catacomb-thumb.jpg" data-full="assets/images/05-catacomb.jpg" alt="Catacomb room with preserved bodies and skulls arranged along the walls" loading="lazy" width="2048" height="1365">
           </button>
           <figcaption>
-            <span>Places</span>
+            <span>Ritual Spaces</span>
             <strong>Catacomb</strong>
             <em>Bodies, time, preservation.</em>
           </figcaption>
@@ -684,24 +717,24 @@
         </figure>
 
 
-        <figure class="work" data-category="Human Traces" data-full="assets/images/14-ice-figure.jpg">
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/14-ice-figure.jpg">
           <button class="image-button" type="button" aria-label="Open Ice Figure">
             <img src="assets/images/14-ice-figure-thumb.jpg" data-full="assets/images/14-ice-figure.jpg" alt="Solitary figure standing on a frozen surface under pale light" loading="lazy" width="1536" height="2048">
           </button>
           <figcaption>
-            <span>Human Traces</span>
+            <span>Atmospheres</span>
             <strong>Ice Figure</strong>
             <em>A body facing a silent surface.</em>
           </figcaption>
         </figure>
 
 
-        <figure class="work" data-category="Human Traces" data-full="assets/images/10-salar-cactus.jpg">
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/10-salar-cactus.jpg">
           <button class="image-button" type="button" aria-label="Open Salar">
             <img src="assets/images/10-salar-cactus-thumb.jpg" data-full="assets/images/10-salar-cactus.jpg" alt="Seated figure among tall cactus plants overlooking a salt flat" loading="lazy" width="2048" height="1365">
           </button>
           <figcaption>
-            <span>Human Traces</span>
+            <span>Atmospheres</span>
             <strong>Salar</strong>
             <em>A figure among cactus and salt.</em>
           </figcaption>
@@ -730,24 +763,24 @@
         </figure>
 
 
-        <figure class="work" data-category="Places" data-full="assets/images/04-stone-kitchen.jpg">
+        <figure class="work" data-category="Ritual Spaces" data-full="assets/images/04-stone-kitchen.jpg">
           <button class="image-button" type="button" aria-label="Open Stone Kitchen">
             <img src="assets/images/04-stone-kitchen-thumb.jpg" data-full="assets/images/04-stone-kitchen.jpg" alt="Stone kitchen interior with window light, tools and domestic objects" loading="lazy" width="2048" height="1365">
           </button>
           <figcaption>
-            <span>Places</span>
+            <span>Ritual Spaces</span>
             <strong>Stone Kitchen</strong>
             <em>Domestic memory, stone and window light.</em>
           </figcaption>
         </figure>
 
 
-        <figure class="work" data-category="Places" data-full="assets/images/03-griffin-room.jpg">
+        <figure class="work" data-category="Ritual Spaces" data-full="assets/images/03-griffin-room.jpg">
           <button class="image-button" type="button" aria-label="Open Griffin Room">
             <img src="assets/images/03-griffin-room-thumb.jpg" data-full="assets/images/03-griffin-room.jpg" alt="Dark historic interior with a yellow griffin banner and table objects" loading="lazy" width="1365" height="2048">
           </button>
           <figcaption>
-            <span>Places</span>
+            <span>Ritual Spaces</span>
             <strong>Griffin Room</strong>
             <em>A dark interior held by a single symbol.</em>
           </figcaption>
@@ -766,12 +799,12 @@
         </figure>
 
 
-        <figure class="work" data-category="Atmospheres" data-full="assets/images/21-venus.jpg">
+        <figure class="work" data-category="Places" data-full="assets/images/21-venus.jpg">
           <button class="image-button" type="button" aria-label="Open Venus">
             <img src="assets/images/21-venus-thumb.jpg" data-full="assets/images/21-venus.jpg" alt="Waterfront scene at violet dusk with a translucent net in the foreground" loading="lazy" width="2048" height="1365">
           </button>
           <figcaption>
-            <span>Atmospheres</span>
+            <span>Places</span>
             <strong>Venus</strong>
             <em>Water, veil and violet dusk.</em>
           </figcaption>
@@ -788,24 +821,24 @@
             <em>Silhouette, dusk, open sky.</em>
           </figcaption>
         </figure>
-        <figure class="work" data-category="Places" data-full="assets/images/23-urban-void.jpg">
+        <figure class="work" data-category="Urban Voids" data-full="assets/images/23-urban-void.jpg">
           <button class="image-button" type="button" aria-label="Open Urban Void">
             <img src="assets/images/23-urban-void-thumb.jpg" data-full="assets/images/23-urban-void.jpg" alt="Dark urban architectural passage with tall buildings and a narrow bright sky opening" loading="lazy" width="1365" height="2048">
           </button>
           <figcaption>
-            <span>Places</span>
+            <span>Urban Voids</span>
             <strong>Urban Void</strong>
             <em>Architecture as shadow, passage and distance.</em>
           </figcaption>
         </figure>
 
 
-        <figure class="work" data-category="Places" data-full="assets/images/02-yellow-line.jpg">
+        <figure class="work" data-category="Urban Voids" data-full="assets/images/02-yellow-line.jpg">
           <button class="image-button" type="button" aria-label="Open Yellow Line">
             <img src="assets/images/02-yellow-line-thumb.jpg" data-full="assets/images/02-yellow-line.jpg" alt="Minimal architectural wall with a yellow horizontal line, door and mailbox" loading="lazy" width="2048" height="1365">
           </button>
           <figcaption>
-            <span>Places</span>
+            <span>Urban Voids</span>
             <strong>Yellow Line</strong>
             <em>A minimal wall, a door, a line.</em>
           </figcaption>
@@ -836,24 +869,24 @@
         </figure>
 
 
-        <figure class="work" data-category="Places" data-full="assets/images/15-boudha-stupa.jpg">
+        <figure class="work" data-category="Ritual Spaces" data-full="assets/images/15-boudha-stupa.jpg">
           <button class="image-button" type="button" aria-label="Open Boudha Stupa">
             <img src="assets/images/15-boudha-stupa-thumb.jpg" data-full="assets/images/15-boudha-stupa.jpg" alt="Boudha Stupa with colorful prayer flags crossing the frame" loading="lazy" width="2048" height="1365">
           </button>
           <figcaption>
-            <span>Places</span>
+            <span>Ritual Spaces</span>
             <strong>Boudha Stupa</strong>
             <em>Color, prayer flags and sacred geometry.</em>
           </figcaption>
         </figure>
 
 
-        <figure class="work" data-category="Places" data-full="assets/images/16-dressing.jpg">
+        <figure class="work" data-category="Ritual Spaces" data-full="assets/images/16-dressing.jpg">
           <button class="image-button" type="button" aria-label="Open Dressing">
             <img src="assets/images/16-dressing-thumb.jpg" data-full="assets/images/16-dressing.jpg" alt="Children in red clothing performing a ritual gesture near water" loading="lazy" width="2048" height="1365">
           </button>
           <figcaption>
-            <span>Places</span>
+            <span>Ritual Spaces</span>
             <strong>Dressing</strong>
             <em>Ritual, water and red cloth.</em>
           </figcaption>
