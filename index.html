@@ -55,10 +55,13 @@
       },
       "image": [
         "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/06-green-silence.jpg",
-        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/01-threshold-green.jpg",
         "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/05-catacomb.jpg",
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/01-threshold-green.jpg",
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/24-child-threshold.jpg",
         "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/13-blue-fog.jpg",
-        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/20-typical-hat.jpg"
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/14-ice-figure.jpg",
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/22-moon-salt-flat.jpg",
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/23-urban-void.jpg"
       ]
     }
   ]
@@ -433,6 +436,14 @@
       letter-spacing: -0.01em;
     }
 
+
+    .contact-intro {
+      margin: 34px 0 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
     .small-text {
       max-width: 720px;
       margin-top: 34px;
@@ -568,7 +579,7 @@
   <section class="hero" id="top">
     <div class="hero-copy">
       <div class="eyebrow">Photography · Memory · Thresholds · Human Traces</div>
-      <h1>Places that keep a trace.</h1>
+      <h1>Places that remember.</h1>
       <p class="intro">Suspended places, ritual spaces, human distance, and landscapes held in memory.</p>
     </div>
     <div class="hero-image">
@@ -580,67 +591,10 @@
     <section class="section" id="work">
       <div class="section-header">
         <h2>Selected Works</h2>
-        <p>A tighter sequence of places, figures and atmospheres.</p>
+        <p>A curated sequence of places, figures and atmospheres.</p>
       </div>
-
-      <div class="filters" aria-label="Filter works">
-        <button type="button" class="active" data-filter="all">All</button>
-        <button type="button" data-filter="Places">Places</button>
-        <button type="button" data-filter="Human Traces">Human Traces</button>
-        <button type="button" data-filter="Atmospheres">Atmospheres</button>
-      </div>
-
       <div class="gallery">
-        <figure class="work" data-category="Places" data-full="assets/images/01-threshold-green.jpg">
-          <button class="image-button" type="button" aria-label="Open Threshold">
-            <img src="assets/images/01-threshold-green-thumb.jpg" data-full="assets/images/01-threshold-green.jpg" alt="Stone archway and iron railing opening onto green trees and water" loading="lazy" width="1365" height="2048">
-          </button>
-          <figcaption>
-            <span>Places</span>
-            <strong>Threshold</strong>
-            <em>Stone, shadow, green light.</em>
-          </figcaption>
-        </figure>
-        <figure class="work" data-category="Places" data-full="assets/images/02-yellow-line.jpg">
-          <button class="image-button" type="button" aria-label="Open Yellow Line">
-            <img src="assets/images/02-yellow-line-thumb.jpg" data-full="assets/images/02-yellow-line.jpg" alt="Minimal architectural wall with a yellow horizontal line, door and mailbox" loading="lazy" width="2048" height="1365">
-          </button>
-          <figcaption>
-            <span>Places</span>
-            <strong>Yellow Line</strong>
-            <em>A minimal wall, a door, a line.</em>
-          </figcaption>
-        </figure>
-        <figure class="work" data-category="Places" data-full="assets/images/03-griffin-room.jpg">
-          <button class="image-button" type="button" aria-label="Open Griffin Room">
-            <img src="assets/images/03-griffin-room-thumb.jpg" data-full="assets/images/03-griffin-room.jpg" alt="Dark historic interior with a yellow griffin banner and table objects" loading="lazy" width="1365" height="2048">
-          </button>
-          <figcaption>
-            <span>Places</span>
-            <strong>Griffin Room</strong>
-            <em>A dark interior held by a single symbol.</em>
-          </figcaption>
-        </figure>
-        <figure class="work" data-category="Places" data-full="assets/images/04-stone-kitchen.jpg">
-          <button class="image-button" type="button" aria-label="Open Stone Kitchen">
-            <img src="assets/images/04-stone-kitchen-thumb.jpg" data-full="assets/images/04-stone-kitchen.jpg" alt="Stone kitchen interior with window light, tools and domestic objects" loading="lazy" width="2048" height="1365">
-          </button>
-          <figcaption>
-            <span>Places</span>
-            <strong>Stone Kitchen</strong>
-            <em>Domestic memory, stone and window light.</em>
-          </figcaption>
-        </figure>
-        <figure class="work" data-category="Places" data-full="assets/images/05-catacomb.jpg">
-          <button class="image-button" type="button" aria-label="Open Catacomb">
-            <img src="assets/images/05-catacomb-thumb.jpg" data-full="assets/images/05-catacomb.jpg" alt="Catacomb room with preserved bodies and skulls arranged along the walls" loading="lazy" width="2048" height="1365">
-          </button>
-          <figcaption>
-            <span>Places</span>
-            <strong>Catacomb</strong>
-            <em>Bodies, time, preservation.</em>
-          </figcaption>
-        </figure>
+        
         <figure class="work" data-category="Atmospheres" data-full="assets/images/06-green-silence.jpg">
           <button class="image-button" type="button" aria-label="Open Green Silence">
             <img src="assets/images/06-green-silence-thumb.jpg" data-full="assets/images/06-green-silence.jpg" alt="Stone bench in a misty green forest after rain" loading="lazy" width="1365" height="2048">
@@ -651,56 +605,41 @@
             <em>A quiet place after rain.</em>
           </figcaption>
         </figure>
-        <figure class="work" data-category="Atmospheres" data-full="assets/images/07-sea-rocks.jpg">
-          <button class="image-button" type="button" aria-label="Open Sea Rocks">
-            <img src="assets/images/07-sea-rocks-thumb.jpg" data-full="assets/images/07-sea-rocks.jpg" alt="Long exposure seascape with dark rocks and soft waves at dusk" loading="lazy" width="2048" height="1365">
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/05-catacomb.jpg">
+          <button class="image-button" type="button" aria-label="Open Catacomb">
+            <img src="assets/images/05-catacomb-thumb.jpg" data-full="assets/images/05-catacomb.jpg" alt="Catacomb room with preserved bodies and skulls arranged along the walls" loading="lazy" width="2048" height="1365">
           </button>
           <figcaption>
-            <span>Atmospheres</span>
-            <strong>Sea Rocks</strong>
-            <em>Movement held at the edge of the sea.</em>
+            <span>Places</span>
+            <strong>Catacomb</strong>
+            <em>Bodies, time, preservation.</em>
           </figcaption>
         </figure>
-        <figure class="work" data-category="Human Traces" data-full="assets/images/08-woman-hat.jpg">
-          <button class="image-button" type="button" aria-label="Open Woman with Hat">
-            <img src="assets/images/08-woman-hat-thumb.jpg" data-full="assets/images/08-woman-hat.jpg" alt="Portrait of a woman in a bowler hat and purple shawl against a white wall" loading="lazy" width="2048" height="1365">
+
+<figure class="work" data-category="Places" data-full="assets/images/01-threshold-green.jpg">
+          <button class="image-button" type="button" aria-label="Open Threshold">
+            <img src="assets/images/01-threshold-green-thumb.jpg" data-full="assets/images/01-threshold-green.jpg" alt="Stone archway and iron railing opening onto green trees and water" loading="lazy" width="1365" height="2048">
           </button>
           <figcaption>
-            <span>Human Traces</span>
-            <strong>Woman with Hat</strong>
-            <em>Portrait, color, distance.</em>
+            <span>Places</span>
+            <strong>Threshold</strong>
+            <em>Stone, shadow, green light.</em>
           </figcaption>
         </figure>
-        <figure class="work" data-category="Atmospheres" data-full="assets/images/09-flamingos.jpg">
-          <button class="image-button" type="button" aria-label="Open Laguna">
-            <img src="assets/images/09-flamingos-thumb.jpg" data-full="assets/images/09-flamingos.jpg" alt="Flamingos feeding in a high-altitude lagoon with mountains in the background" loading="lazy" width="2048" height="1365">
-          </button>
-          <figcaption>
-            <span>Atmospheres</span>
-            <strong>Laguna</strong>
-            <em>Water, animals and altitude.</em>
-          </figcaption>
-        </figure>
-        <figure class="work" data-category="Human Traces" data-full="assets/images/10-salar-cactus.jpg">
-          <button class="image-button" type="button" aria-label="Open Salar">
-            <img src="assets/images/10-salar-cactus-thumb.jpg" data-full="assets/images/10-salar-cactus.jpg" alt="Seated figure among tall cactus plants overlooking a salt flat" loading="lazy" width="2048" height="1365">
+        <figure class="work" data-category="Human Traces" data-full="assets/images/24-child-threshold.jpg">
+          <button class="image-button" type="button" aria-label="Open Child at Threshold">
+            <img src="assets/images/24-child-threshold-thumb.jpg" data-full="assets/images/24-child-threshold.jpg" alt="Black and white photograph of a child standing at a doorway beside a brick wall" loading="lazy" width="2048" height="1365">
           </button>
           <figcaption>
             <span>Human Traces</span>
-            <strong>Salar</strong>
-            <em>A figure among cactus and salt.</em>
+            <strong>Child at Threshold</strong>
+            <em>A figure held between doorway and street.</em>
           </figcaption>
         </figure>
-        <figure class="work" data-category="Atmospheres" data-full="assets/images/12-snow-birds.jpg">
-          <button class="image-button" type="button" aria-label="Open Snow Birds">
-            <img src="assets/images/12-snow-birds-thumb.jpg" data-full="assets/images/12-snow-birds.jpg" alt="Snowy landscape with birds flying over rock formations" loading="lazy" width="2048" height="1365">
-          </button>
-          <figcaption>
-            <span>Atmospheres</span>
-            <strong>Snow Birds</strong>
-            <em>A cold landscape crossed by flight.</em>
-          </figcaption>
-        </figure>
+
+
         <figure class="work" data-category="Atmospheres" data-full="assets/images/13-blue-fog.jpg">
           <button class="image-button" type="button" aria-label="Open Blue Fog">
             <img src="assets/images/13-blue-fog-thumb.jpg" data-full="assets/images/13-blue-fog.jpg" alt="Moody village on a cliff with blue storm clouds and fog" loading="lazy" width="2048" height="1536">
@@ -711,6 +650,8 @@
             <em>A village suspended in storm light.</em>
           </figcaption>
         </figure>
+
+
         <figure class="work" data-category="Human Traces" data-full="assets/images/14-ice-figure.jpg">
           <button class="image-button" type="button" aria-label="Open Ice Figure">
             <img src="assets/images/14-ice-figure-thumb.jpg" data-full="assets/images/14-ice-figure.jpg" alt="Solitary figure standing on a frozen surface under pale light" loading="lazy" width="1536" height="2048">
@@ -721,56 +662,30 @@
             <em>A body facing a silent surface.</em>
           </figcaption>
         </figure>
-        <figure class="work" data-category="Places" data-full="assets/images/15-boudha-stupa.jpg">
-          <button class="image-button" type="button" aria-label="Open Boudha Stupa">
-            <img src="assets/images/15-boudha-stupa-thumb.jpg" data-full="assets/images/15-boudha-stupa.jpg" alt="Boudha Stupa with colorful prayer flags crossing the frame" loading="lazy" width="2048" height="1365">
-          </button>
-          <figcaption>
-            <span>Places</span>
-            <strong>Boudha Stupa</strong>
-            <em>Color, prayer flags and sacred geometry.</em>
-          </figcaption>
-        </figure>
-        <figure class="work" data-category="Places" data-full="assets/images/16-dressing.jpg">
-          <button class="image-button" type="button" aria-label="Open Dressing">
-            <img src="assets/images/16-dressing-thumb.jpg" data-full="assets/images/16-dressing.jpg" alt="Children in red clothing performing a ritual gesture near water" loading="lazy" width="2048" height="1365">
-          </button>
-          <figcaption>
-            <span>Places</span>
-            <strong>Dressing</strong>
-            <em>Ritual, water and red cloth.</em>
-          </figcaption>
-        </figure>
-        <figure class="work" data-category="Atmospheres" data-full="assets/images/17-freebird.jpg">
-          <button class="image-button" type="button" aria-label="Open Freebird">
-            <img src="assets/images/17-freebird-thumb.jpg" data-full="assets/images/17-freebird.jpg" alt="Dark architectural silhouette and birds against a dramatic sunset sky" loading="lazy" width="2048" height="1365">
-          </button>
-          <figcaption>
-            <span>Atmospheres</span>
-            <strong>Freebird</strong>
-            <em>Silhouette, dusk, open sky.</em>
-          </figcaption>
-        </figure>
-        <figure class="work" data-category="Atmospheres" data-full="assets/images/18-evening-tree.jpg">
-          <button class="image-button" type="button" aria-label="Open Evening Tree">
-            <img src="assets/images/18-evening-tree-thumb.jpg" data-full="assets/images/18-evening-tree.jpg" alt="Bare tree silhouette with crescent moon and evening gradient sky" loading="lazy" width="1536" height="2048">
-          </button>
-          <figcaption>
-            <span>Atmospheres</span>
-            <strong>Evening Tree</strong>
-            <em>A thin moon over the last light.</em>
-          </figcaption>
-        </figure>
-        <figure class="work" data-category="Human Traces" data-full="assets/images/19-riot.jpg">
-          <button class="image-button" type="button" aria-label="Open Riot">
-            <img src="assets/images/19-riot-thumb.jpg" data-full="assets/images/19-riot.jpg" alt="Night street demonstration with people holding multilingual peace signs" loading="lazy" width="2048" height="1365">
+
+
+        <figure class="work" data-category="Human Traces" data-full="assets/images/10-salar-cactus.jpg">
+          <button class="image-button" type="button" aria-label="Open Salar">
+            <img src="assets/images/10-salar-cactus-thumb.jpg" data-full="assets/images/10-salar-cactus.jpg" alt="Seated figure among tall cactus plants overlooking a salt flat" loading="lazy" width="2048" height="1365">
           </button>
           <figcaption>
             <span>Human Traces</span>
-            <strong>Riot</strong>
-            <em>Night, signs, collective movement.</em>
+            <strong>Salar</strong>
+            <em>A figure among cactus and salt.</em>
           </figcaption>
         </figure>
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/22-moon-salt-flat.jpg">
+          <button class="image-button" type="button" aria-label="Open Moon Salt Flat">
+            <img src="assets/images/22-moon-salt-flat-thumb.jpg" data-full="assets/images/22-moon-salt-flat.jpg" alt="Minimal salt flat landscape with a pale moon rising over distant mountains" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Atmospheres</span>
+            <strong>Moon Salt Flat</strong>
+            <em>A pale moon over a silent salt horizon.</em>
+          </figcaption>
+        </figure>
+
+
         <figure class="work" data-category="Human Traces" data-full="assets/images/20-typical-hat.jpg">
           <button class="image-button" type="button" aria-label="Open Typical Hat">
             <img src="assets/images/20-typical-hat-thumb.jpg" data-full="assets/images/20-typical-hat.jpg" alt="Profile portrait of an older man in a patterned cap against a dark wall" loading="lazy" width="2047" height="1365">
@@ -781,6 +696,44 @@
             <em>A profile against a dark wall.</em>
           </figcaption>
         </figure>
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/04-stone-kitchen.jpg">
+          <button class="image-button" type="button" aria-label="Open Stone Kitchen">
+            <img src="assets/images/04-stone-kitchen-thumb.jpg" data-full="assets/images/04-stone-kitchen.jpg" alt="Stone kitchen interior with window light, tools and domestic objects" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Stone Kitchen</strong>
+            <em>Domestic memory, stone and window light.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/03-griffin-room.jpg">
+          <button class="image-button" type="button" aria-label="Open Griffin Room">
+            <img src="assets/images/03-griffin-room-thumb.jpg" data-full="assets/images/03-griffin-room.jpg" alt="Dark historic interior with a yellow griffin banner and table objects" loading="lazy" width="1365" height="2048">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Griffin Room</strong>
+            <em>A dark interior held by a single symbol.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Human Traces" data-full="assets/images/08-woman-hat.jpg">
+          <button class="image-button" type="button" aria-label="Open Woman with Hat">
+            <img src="assets/images/08-woman-hat-thumb.jpg" data-full="assets/images/08-woman-hat.jpg" alt="Portrait of a woman in a bowler hat and purple shawl against a white wall" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Human Traces</span>
+            <strong>Woman with Hat</strong>
+            <em>Portrait, color, distance.</em>
+          </figcaption>
+        </figure>
+
+
         <figure class="work" data-category="Atmospheres" data-full="assets/images/21-venus.jpg">
           <button class="image-button" type="button" aria-label="Open Venus">
             <img src="assets/images/21-venus-thumb.jpg" data-full="assets/images/21-venus.jpg" alt="Waterfront scene at violet dusk with a translucent net in the foreground" loading="lazy" width="2048" height="1365">
@@ -789,6 +742,100 @@
             <span>Atmospheres</span>
             <strong>Venus</strong>
             <em>Water, veil and violet dusk.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/17-freebird.jpg">
+          <button class="image-button" type="button" aria-label="Open Freebird">
+            <img src="assets/images/17-freebird-thumb.jpg" data-full="assets/images/17-freebird.jpg" alt="Dark architectural silhouette and birds against a dramatic sunset sky" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Atmospheres</span>
+            <strong>Freebird</strong>
+            <em>Silhouette, dusk, open sky.</em>
+          </figcaption>
+        </figure>
+        <figure class="work" data-category="Places" data-full="assets/images/23-urban-void.jpg">
+          <button class="image-button" type="button" aria-label="Open Urban Void">
+            <img src="assets/images/23-urban-void-thumb.jpg" data-full="assets/images/23-urban-void.jpg" alt="Dark urban architectural passage with tall buildings and a narrow bright sky opening" loading="lazy" width="1365" height="2048">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Urban Void</strong>
+            <em>Architecture as shadow, passage and distance.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/02-yellow-line.jpg">
+          <button class="image-button" type="button" aria-label="Open Yellow Line">
+            <img src="assets/images/02-yellow-line-thumb.jpg" data-full="assets/images/02-yellow-line.jpg" alt="Minimal architectural wall with a yellow horizontal line, door and mailbox" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Yellow Line</strong>
+            <em>A minimal wall, a door, a line.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/12-snow-birds.jpg">
+          <button class="image-button" type="button" aria-label="Open Snow Birds">
+            <img src="assets/images/12-snow-birds-thumb.jpg" data-full="assets/images/12-snow-birds.jpg" alt="Snowy landscape with birds flying over rock formations" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Atmospheres</span>
+            <strong>Snow Birds</strong>
+            <em>A cold landscape crossed by flight.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/09-flamingos.jpg">
+          <button class="image-button" type="button" aria-label="Open Laguna">
+            <img src="assets/images/09-flamingos-thumb.jpg" data-full="assets/images/09-flamingos.jpg" alt="Flamingos feeding in a high-altitude lagoon with mountains in the background" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Atmospheres</span>
+            <strong>Laguna</strong>
+            <em>Water, animals and altitude.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/15-boudha-stupa.jpg">
+          <button class="image-button" type="button" aria-label="Open Boudha Stupa">
+            <img src="assets/images/15-boudha-stupa-thumb.jpg" data-full="assets/images/15-boudha-stupa.jpg" alt="Boudha Stupa with colorful prayer flags crossing the frame" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Boudha Stupa</strong>
+            <em>Color, prayer flags and sacred geometry.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/16-dressing.jpg">
+          <button class="image-button" type="button" aria-label="Open Dressing">
+            <img src="assets/images/16-dressing-thumb.jpg" data-full="assets/images/16-dressing.jpg" alt="Children in red clothing performing a ritual gesture near water" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Dressing</strong>
+            <em>Ritual, water and red cloth.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Human Traces" data-full="assets/images/19-riot.jpg">
+          <button class="image-button" type="button" aria-label="Open Riot">
+            <img src="assets/images/19-riot-thumb.jpg" data-full="assets/images/19-riot.jpg" alt="Night street demonstration with people holding multilingual peace signs" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Human Traces</span>
+            <strong>Riot</strong>
+            <em>Night, signs, collective movement.</em>
           </figcaption>
         </figure>
       </div>
@@ -855,10 +902,11 @@
           <h2>About</h2>
         </div>
         <div class="about-text">
-          <p>Raven Olisaro is a photography project focused on atmospheric travel photography, quiet interiors, ritual spaces, human traces, thresholds and landscapes.</p>
-          <p>The work moves between documentary observation and visual memory, following places where light, silence and human distance remain visible.</p>
+          <p>Raven Olisaro is a photographic project about places that seem to retain a human trace.</p>
+          <p>The work moves through quiet interiors, ritual spaces, thresholds and atmospheric landscapes, looking for the point where place becomes memory.</p>
           
-            <p class="seo-note">Selected photographic works include images from Europe, South America and Asia, with a focus on suspended places, ritual gestures, quiet interiors, atmospheric landscapes and human traces.</p>
+            <p class="seo-note">Selected works move across Europe, South America and Asia, following suspended places, ritual gestures, quiet interiors, atmospheric landscapes and human traces.</p>
+          <p class="contact-intro">For prints, collaborations or selected projects:</p>
           <div class="small-text">
             Contact: <a href="mailto:karloparillo@gmail.com">karloparillo@gmail.com</a><br>
             Instagram: <a href="https://www.instagram.com/ravenolisaro/" target="_blank" rel="noopener">@ravenolisaro</a>
@@ -880,21 +928,7 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    const filterButtons = document.querySelectorAll("[data-filter]");
-    const works = document.querySelectorAll(".work");
-
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const filter = button.dataset.filter;
-        filterButtons.forEach((b) => b.classList.remove("active"));
-        button.classList.add("active");
-
-        works.forEach((work) => {
-          const show = filter === "all" || work.dataset.category === filter;
-          work.classList.toggle("hidden", !show);
-        });
-      });
+});
     });
 
     const lightbox = document.getElementById("lightbox");

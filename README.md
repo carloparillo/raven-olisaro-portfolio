@@ -119,3 +119,27 @@ Recommended next steps after upload:
 3. Open: https://carloparillo.github.io/raven-olisaro-portfolio/robots.txt
 4. Submit the sitemap in Google Search Console.
 5. Add the site link to Instagram bio, LinkedIn, and the old Wix site if possible.
+
+
+## Latest editorial refinement
+
+- Changed homepage headline to `Places that remember.`
+- Removed navigation filters for a more editorial portfolio experience
+- Removed `Sea Rocks` and `Evening Tree`
+- Kept `Laguna`, `Boudha Stupa` and `Dressing`
+- Reordered the gallery into a more narrative sequence
+- Reduced visible captions
+- Rewrote the About section in a more authorial tone
+- Added a cleaner contact call-to-action
+- Preserved SEO files, raven favicon, Green Silence hero image, sitemap and robots.txt
+
+
+## Latest gallery update
+
+Added:
+- `Moon Salt Flat`
+- `Urban Void`
+- `Child at Threshold`
+
+Gallery reordered to place the strongest aesthetic/emotional images first while keeping a coherent narrative sequence:
+memory → thresholds → human presence → atmospheric landscapes → ritual/documentary works.

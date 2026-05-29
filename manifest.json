@@ -43,13 +43,6 @@
       "category": "Atmospheres"
     },
     {
-      "source": "_PIC4751.jpg",
-      "full": "assets/images/07-sea-rocks.jpg",
-      "thumb": "assets/images/07-sea-rocks-thumb.jpg",
-      "title": "Sea Rocks",
-      "category": "Atmospheres"
-    },
-    {
       "source": "_PIC5387.jpg",
       "full": "assets/images/08-woman-hat.jpg",
       "thumb": "assets/images/08-woman-hat-thumb.jpg",
@@ -113,13 +106,6 @@
       "category": "Atmospheres"
     },
     {
-      "source": "IMG_3565.jpg",
-      "full": "assets/images/18-evening-tree.jpg",
-      "thumb": "assets/images/18-evening-tree-thumb.jpg",
-      "title": "Evening Tree",
-      "category": "Atmospheres"
-    },
-    {
       "source": "Riot.jpg",
       "full": "assets/images/19-riot.jpg",
       "thumb": "assets/images/19-riot-thumb.jpg",
@@ -139,6 +125,27 @@
       "thumb": "assets/images/21-venus-thumb.jpg",
       "title": "Venus",
       "category": "Atmospheres"
+    },
+    {
+      "source": "_PIC6464.jpg",
+      "full": "assets/images/22-moon-salt-flat.jpg",
+      "thumb": "assets/images/22-moon-salt-flat-thumb.jpg",
+      "title": "Moon Salt Flat",
+      "category": "Atmospheres"
+    },
+    {
+      "source": "_PIC4977.jpg",
+      "full": "assets/images/23-urban-void.jpg",
+      "thumb": "assets/images/23-urban-void-thumb.jpg",
+      "title": "Urban Void",
+      "category": "Places"
+    },
+    {
+      "source": "IMG_3245.jpg",
+      "full": "assets/images/24-child-threshold.jpg",
+      "thumb": "assets/images/24-child-threshold-thumb.jpg",
+      "title": "Child at Threshold",
+      "category": "Human Traces"
     }
   ],
   "missing": [],
