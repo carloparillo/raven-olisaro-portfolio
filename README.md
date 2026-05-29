@@ -190,3 +190,22 @@ Fixed interactive behavior:
 - image click opens full-size modal preview
 - Escape key / close button / background click close the modal
 - corrected category mapping and data attributes
+
+
+## Latest image expansion
+
+Added nine selected images aligned with The Trace Archive direction:
+- Village in Fog
+- Ancient Roots
+- Glass Threshold
+- Hands at Work
+- Inside, Outside
+- Working Window
+- Coastal Threshold
+- Stone Span
+- Broken Arches
+
+Selection logic:
+- strengthened Atmospheres, Places, Human Traces and Urban Voids
+- avoided images that were too generic, too bright/color-led, or less coherent with the archive identity
+- preserved existing opening sequence and inserted new works near the top of the archive

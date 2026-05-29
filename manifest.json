@@ -146,6 +146,78 @@
       "thumb": "assets/images/24-child-threshold-thumb.jpg",
       "title": "Child at Threshold",
       "category": "Human Traces"
+    },
+    {
+      "title": "Village in Fog",
+      "category": "Atmospheres",
+      "full": "assets/images/25-village-in-fog.jpg",
+      "thumb": "assets/images/25-village-in-fog-thumb.jpg",
+      "alt": "Stone village on a cliff wrapped in blue fog",
+      "note": "A place held between landscape and memory."
+    },
+    {
+      "title": "Ancient Roots",
+      "category": "Places",
+      "full": "assets/images/26-ancient-roots.jpg",
+      "thumb": "assets/images/26-ancient-roots-thumb.jpg",
+      "alt": "Large old tree with exposed roots in a quiet garden",
+      "note": "A silent structure of time."
+    },
+    {
+      "title": "Glass Threshold",
+      "category": "Human Traces",
+      "full": "assets/images/27-glass-threshold.jpg",
+      "thumb": "assets/images/27-glass-threshold-thumb.jpg",
+      "alt": "Dark human silhouette leaning near a lit glass doorway at night",
+      "note": "A human trace at the edge of light."
+    },
+    {
+      "title": "Hands at Work",
+      "category": "Human Traces",
+      "full": "assets/images/28-hands-at-work.jpg",
+      "thumb": "assets/images/28-hands-at-work-thumb.jpg",
+      "alt": "Craftsman shaping clay in a dim interior",
+      "note": "Gesture, matter and concentration."
+    },
+    {
+      "title": "Inside, Outside",
+      "category": "Human Traces",
+      "full": "assets/images/29-inside-outside.jpg",
+      "thumb": "assets/images/29-inside-outside-thumb.jpg",
+      "alt": "People seated inside a café seen through large street windows",
+      "note": "Private gestures seen from the street."
+    },
+    {
+      "title": "Working Window",
+      "category": "Human Traces",
+      "full": "assets/images/30-working-window.jpg",
+      "thumb": "assets/images/30-working-window-thumb.jpg",
+      "alt": "Kitchen workers framed by a lit window at night",
+      "note": "Daily work framed as a quiet stage."
+    },
+    {
+      "title": "Coastal Threshold",
+      "category": "Places",
+      "full": "assets/images/31-coastal-threshold.jpg",
+      "thumb": "assets/images/31-coastal-threshold-thumb.jpg",
+      "alt": "Quiet sea and stone coastal structure under a pale sky",
+      "note": "A threshold between stone, water and distance."
+    },
+    {
+      "title": "Stone Span",
+      "category": "Places",
+      "full": "assets/images/32-stone-span.jpg",
+      "thumb": "assets/images/32-stone-span-thumb.jpg",
+      "alt": "Black and white stone bridge crossing a river",
+      "note": "A passage built to outlast its crossing."
+    },
+    {
+      "title": "Broken Arches",
+      "category": "Urban Voids",
+      "full": "assets/images/33-broken-arches.jpg",
+      "thumb": "assets/images/33-broken-arches-thumb.jpg",
+      "alt": "Close architectural view of broken arched windows",
+      "note": "An urban surface marked by absence."
     }
   ],
   "missing": [],
