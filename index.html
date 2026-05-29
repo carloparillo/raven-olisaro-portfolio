@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Raven Olisaro — Photography</title>
-  <meta name="description" content="Selected photographic works by Raven Olisaro: atmospheric photography, human traces, ritual spaces, thresholds and landscapes.">
-  <meta name="keywords" content="Raven Olisaro, photography portfolio, atmospheric photography, travel photography, ritual spaces photography, human traces photography, thresholds photography, landscape photography, fine art photography">
+  <title>Raven Olisaro — The Trace Archive</title>
+  <meta name="description" content="The Trace Archive by Raven Olisaro: an evolving photographic archive of quiet places, human traces, ritual spaces, thresholds and landscapes held in memory.">
+  <meta name="keywords" content="Raven Olisaro, The Trace Archive, photography archive, atmospheric photography, human traces photography, ritual spaces photography, thresholds photography, silent landscapes, photographic memory, fine art photography">
   <meta name="author" content="Raven Olisaro">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://carloparillo.github.io/raven-olisaro-portfolio/">
-  <meta property="og:title" content="Raven Olisaro — Photography">
-  <meta property="og:description" content="Selected photographic works by Raven Olisaro: atmospheric photography, human traces, ritual spaces, thresholds and landscapes.">
+  <meta property="og:title" content="Raven Olisaro — The Trace Archive">
+  <meta property="og:description" content="The Trace Archive by Raven Olisaro: an evolving photographic archive of quiet places, human traces, ritual spaces, thresholds and landscapes held in memory.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://carloparillo.github.io/raven-olisaro-portfolio/">
   <meta property="og:image" content="https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/06-green-silence.jpg">
   <meta property="og:image:alt" content="Green Silence by Raven Olisaro">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Raven Olisaro — Photography">
-  <meta name="twitter:description" content="Selected photographic works by Raven Olisaro: atmospheric photography, human traces, ritual spaces, thresholds and landscapes.">
+  <meta name="twitter:title" content="Raven Olisaro — The Trace Archive">
+  <meta name="twitter:description" content="The Trace Archive by Raven Olisaro: an evolving photographic archive of quiet places, human traces, ritual spaces, thresholds and landscapes held in memory.">
   <meta name="twitter:image" content="https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/06-green-silence.jpg">
   <script type="application/ld+json">
 {
@@ -27,8 +27,8 @@
       "@type": "WebSite",
       "@id": "https://carloparillo.github.io/raven-olisaro-portfolio/#website",
       "url": "https://carloparillo.github.io/raven-olisaro-portfolio/",
-      "name": "Raven Olisaro — Photography",
-      "description": "Selected photographic works by Raven Olisaro: atmospheric photography, human traces, ritual spaces, thresholds and landscapes.",
+      "name": "Raven Olisaro — The Trace Archive",
+      "description": "The Trace Archive by Raven Olisaro: an evolving photographic archive of quiet places, human traces, ritual spaces, thresholds and landscapes held in memory.",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://carloparillo.github.io/raven-olisaro-portfolio/#person"
@@ -47,9 +47,9 @@
     {
       "@type": "ImageGallery",
       "@id": "https://carloparillo.github.io/raven-olisaro-portfolio/#gallery",
-      "name": "Selected Works — Raven Olisaro",
+      "name": "The Trace Archive — Raven Olisaro",
       "url": "https://carloparillo.github.io/raven-olisaro-portfolio/",
-      "description": "A selected photography portfolio focused on suspended places, ritual spaces, human distance and atmospheric landscapes.",
+      "description": "An evolving photographic archive focused on quiet places, thresholds, human traces, ritual spaces and landscapes held in memory.",
       "creator": {
         "@id": "https://carloparillo.github.io/raven-olisaro-portfolio/#person"
       },
@@ -230,6 +230,25 @@
       letter-spacing: -0.06em;
     }
 
+
+    .archive-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: -18px 0 32px;
+      color: var(--muted);
+    }
+
+    .archive-pills span {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      padding: 8px 11px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
     .filters {
       display: flex;
       flex-wrap: wrap;
@@ -258,14 +277,14 @@
     }
 
     .gallery {
-      columns: 3 320px;
-      column-gap: 18px;
+      columns: 4 260px;
+      column-gap: 14px;
     }
 
     .work {
       position: relative;
       break-inside: avoid;
-      margin: 0 0 18px;
+      margin: 0 0 14px;
       border: 1px solid var(--line);
       background: var(--bg-2);
       overflow: hidden;
@@ -300,7 +319,7 @@
     figcaption {
       display: grid;
       gap: 6px;
-      padding: 15px 15px 17px;
+      padding: 12px 13px 14px;
       border-top: 1px solid var(--line);
       background: rgba(0,0,0,.18);
     }
@@ -543,6 +562,10 @@
         columns: 1;
       }
 
+      .archive-pills {
+        margin-top: -8px;
+      }
+
       .feature-grid {
         grid-template-columns: 1fr;
       }
@@ -570,7 +593,7 @@
       <img src="assets/images/raven-olisaro-logo-negative.png" alt="Raven Olisaro">
     </a>
     <nav class="nav" aria-label="Primary navigation">
-      <a href="#work">Work</a>
+      <a href="#work">Archive</a>
       <a href="#direction">Direction</a>
       <a href="#about">About</a>
     </nav>
@@ -578,9 +601,9 @@
 
   <section class="hero" id="top">
     <div class="hero-copy">
-      <div class="eyebrow">Photography · Memory · Thresholds · Human Traces</div>
+      <div class="eyebrow">The Trace Archive · Memory · Thresholds · Human Traces</div>
       <h1>Places that remember.</h1>
-      <p class="intro">Suspended places, ritual spaces, human distance, and landscapes held in memory.</p>
+      <p class="intro">A living archive of quiet places, human traces, ritual spaces and landscapes held in memory.</p>
     </div>
     <div class="hero-image">
       <img src="assets/images/06-green-silence.jpg" alt="Stone bench in a misty green forest after rain" loading="eager">
@@ -590,9 +613,18 @@
   <main>
     <section class="section" id="work">
       <div class="section-header">
-        <h2>Selected Works</h2>
-        <p>A curated sequence of places, figures and atmospheres.</p>
+        <h2>The Trace Archive</h2>
+        <p>An evolving repository of selected photographs: places, figures, rituals, thresholds and atmospheric landscapes.</p>
       </div>
+      <div class="archive-pills" aria-label="Archive themes">
+        <span>Thresholds</span>
+        <span>Human Traces</span>
+        <span>Ritual Spaces</span>
+        <span>Silent Landscapes</span>
+        <span>Urban Voids</span>
+        <span>Memory Rooms</span>
+      </div>
+
       <div class="gallery">
         
         <figure class="work" data-category="Atmospheres" data-full="assets/images/06-green-silence.jpg">
@@ -845,7 +877,7 @@
       <div class="statement">
         <div class="statement-copy">
           <blockquote>Thresholds. Ritual spaces. Human traces. Landscapes as memory.</blockquote>
-          <p>The portfolio is organized by atmosphere rather than genre. The images work when place, figure and light create distance.</p>
+          <p>The archive is organized by atmosphere rather than genre. Images enter the sequence when place, figure and light create distance.</p>
         </div>
         <div class="statement-image">
           <img src="assets/images/05-catacomb.jpg" alt="Catacomb room with preserved bodies and skulls arranged along the walls" loading="lazy">
@@ -902,11 +934,11 @@
           <h2>About</h2>
         </div>
         <div class="about-text">
-          <p>Raven Olisaro is a photographic project about places that seem to retain a human trace.</p>
-          <p>The work moves through quiet interiors, ritual spaces, thresholds and atmospheric landscapes, looking for the point where place becomes memory.</p>
+          <p>Raven Olisaro is a photographic archive about places that seem to retain a human trace.</p>
+          <p>The work moves through quiet interiors, ritual spaces, thresholds, urban voids and atmospheric landscapes, looking for the point where place becomes memory.</p>
           
-            <p class="seo-note">Selected works move across Europe, South America and Asia, following suspended places, ritual gestures, quiet interiors, atmospheric landscapes and human traces.</p>
-          <p class="contact-intro">For prints, collaborations or selected projects:</p>
+            <p class="seo-note">The Trace Archive collects selected photographic works across Europe, South America and Asia, following suspended places, ritual gestures, quiet interiors, atmospheric landscapes and human traces.</p>
+          <p class="contact-intro">For prints, collaborations, archive selections or selected projects:</p>
           <div class="small-text">
             Contact: <a href="mailto:karloparillo@gmail.com">karloparillo@gmail.com</a><br>
             Instagram: <a href="https://www.instagram.com/ravenolisaro/" target="_blank" rel="noopener">@ravenolisaro</a>
@@ -918,7 +950,7 @@
 
   <footer class="site-footer">
     <span>© <span id="year"></span> Raven Olisaro</span>
-    <span>Photography portfolio</span>
+    <span>The Trace Archive</span>
   </footer>
 
   <div class="lightbox" id="lightbox" aria-hidden="true">

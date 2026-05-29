@@ -143,3 +143,27 @@ Added:
 
 Gallery reordered to place the strongest aesthetic/emotional images first while keeping a coherent narrative sequence:
 memory → thresholds → human presence → atmospheric landscapes → ritual/documentary works.
+
+
+## Latest concept update
+
+Renamed the site concept from a standard photography portfolio to:
+
+- `Raven Olisaro — The Trace Archive`
+
+Included changes:
+- updated page title and metadata
+- updated Open Graph / Twitter titles and descriptions
+- updated JSON-LD structured data
+- changed navigation from `Work` to `Archive`
+- changed `Selected Works` to `The Trace Archive`
+- added thematic archive pillars:
+  - Thresholds
+  - Human Traces
+  - Ritual Spaces
+  - Silent Landscapes
+  - Urban Voids
+  - Memory Rooms
+- made the gallery denser and more archive-like
+- updated About and CTA language
+- preserved current images, raven favicon, sitemap, robots.txt and SEO files
