@@ -1,455 +1,996 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Raven Olisaro — The Trace Archive</title>
-  <meta name="description" content="Selected photographic archive by Raven Olisaro: suspended places, ritual spaces, human traces, thresholds and silent landscapes.">
-  <meta name="keywords" content="Raven Olisaro, photography, travel photography, atmospheric photography, landscape photography, fine art photography">
+  <meta name="description" content="The Trace Archive by Raven Olisaro: an evolving photographic archive of quiet places, human traces, ritual spaces, thresholds and landscapes held in memory.">
+  <meta name="keywords" content="Raven Olisaro, The Trace Archive, photography archive, atmospheric photography, human traces photography, ritual spaces photography, thresholds photography, silent landscapes, photographic memory, fine art photography">
   <meta name="author" content="Raven Olisaro">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://carloparillo.github.io/raven-olisaro-portfolio/">
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="alternate icon" href="assets/icons/favicon.png" type="image/png">
-  <link rel="manifest" href="manifest.json">
   <meta property="og:title" content="Raven Olisaro — The Trace Archive">
-  <meta property="og:description" content="Places that keep a trace.">
+  <meta property="og:description" content="The Trace Archive by Raven Olisaro: an evolving photographic archive of quiet places, human traces, ritual spaces, thresholds and landscapes held in memory.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://carloparillo.github.io/raven-olisaro-portfolio/">
-  <meta property="og:image" content="https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/green-silence.jpg">
+  <meta property="og:image" content="https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/06-green-silence.jpg">
+  <meta property="og:image:alt" content="Green Silence by Raven Olisaro">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Raven Olisaro — The Trace Archive">
+  <meta name="twitter:description" content="The Trace Archive by Raven Olisaro: an evolving photographic archive of quiet places, human traces, ritual spaces, thresholds and landscapes held in memory.">
+  <meta name="twitter:image" content="https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/06-green-silence.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://carloparillo.github.io/raven-olisaro-portfolio/#website",
+      "url": "https://carloparillo.github.io/raven-olisaro-portfolio/",
+      "name": "Raven Olisaro — The Trace Archive",
+      "description": "The Trace Archive by Raven Olisaro: an evolving photographic archive of quiet places, human traces, ritual spaces, thresholds and landscapes held in memory.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://carloparillo.github.io/raven-olisaro-portfolio/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carloparillo.github.io/raven-olisaro-portfolio/#person",
+      "name": "Raven Olisaro",
+      "url": "https://carloparillo.github.io/raven-olisaro-portfolio/",
+      "sameAs": [
+        "https://www.instagram.com/ravenolisaro/"
+      ],
+      "email": "mailto:karloparillo@gmail.com"
+    },
+    {
+      "@type": "ImageGallery",
+      "@id": "https://carloparillo.github.io/raven-olisaro-portfolio/#gallery",
+      "name": "The Trace Archive — Raven Olisaro",
+      "url": "https://carloparillo.github.io/raven-olisaro-portfolio/",
+      "description": "An evolving photographic archive focused on quiet places, thresholds, human traces, ritual spaces and landscapes held in memory.",
+      "creator": {
+        "@id": "https://carloparillo.github.io/raven-olisaro-portfolio/#person"
+      },
+      "image": [
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/06-green-silence.jpg",
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/05-catacomb.jpg",
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/01-threshold-green.jpg",
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/24-child-threshold.jpg",
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/13-blue-fog.jpg",
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/14-ice-figure.jpg",
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/22-moon-salt-flat.jpg",
+        "https://carloparillo.github.io/raven-olisaro-portfolio/assets/images/23-urban-void.jpg"
+      ]
+    }
+  ]
+}
+  </script>
+
   <style>
     :root {
-      --bg:#050607; --panel:#0d0f0f; --text:#f4f1ea; --muted:#9b968b; --line:#2b2b28; --accent:#b7ad8b;
+      --bg: #10100f;
+      --bg-2: #171716;
+      --text: #efeee9;
+      --muted: #aaa69b;
+      --dim: #716d64;
+      --line: rgba(239, 238, 233, .14);
+      --line-strong: rgba(239, 238, 233, .28);
+      --accent: #d8b35f;
+      --max: 1360px;
     }
+
     * { box-sizing: border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--bg); color:var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    a { color:inherit; text-decoration:none; }
-    .site-header { position:sticky; top:0; z-index:20; backdrop-filter: blur(16px); background:rgba(5,6,7,.72); border-bottom:1px solid rgba(255,255,255,.06); }
-    .nav { max-width:1240px; margin:0 auto; padding:18px 22px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-    .brand { display:flex; align-items:center; gap:12px; letter-spacing:.24em; text-transform:uppercase; font-size:12px; color:var(--muted); }
-    .brand img { width:44px; height:44px; object-fit:contain; }
-    .nav-links { display:flex; gap:32px; font-size:12px; letter-spacing:.32em; text-transform:uppercase; color:#c8c2b8; }
-    .hero { max-width:1240px; margin:0 auto; min-height:76vh; padding:90px 22px 70px; display:grid; grid-template-columns:minmax(0,.9fr) minmax(320px,1.1fr); gap:70px; align-items:center; }
-    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.34em; font-size:11px; margin-bottom:24px; }
-    h1 { font-size:clamp(54px,8vw,116px); line-height:.88; margin:0 0 28px; letter-spacing:-.06em; max-width:720px; }
-    .lead { color:#dedad2; font-size:clamp(17px,2vw,22px); line-height:1.55; max-width:540px; }
-    .hero-image { border:1px solid rgba(255,255,255,.12); background:var(--panel); padding:0; }
-    .hero-image img { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; }
-    main { max-width:1240px; margin:0 auto; padding:0 22px 80px; }
-    .section-head { display:flex; justify-content:space-between; gap:30px; align-items:end; padding:70px 0 28px; border-top:1px solid var(--line); }
-    h2 { margin:0; font-size:clamp(28px,4vw,54px); letter-spacing:-.04em; }
-    .small-text { margin:0; color:var(--muted); max-width:430px; line-height:1.55; }
-    .filters { display:flex; flex-wrap:wrap; gap:14px; margin:10px 0 36px; }
-    .filter-btn { cursor:pointer; border:1px solid var(--line); color:#cfc9bd; background:#080909; padding:13px 20px; border-radius:999px; text-transform:uppercase; letter-spacing:.22em; font-size:11px; }
-    .filter-btn.active, .filter-btn:hover { border-color:var(--accent); color:var(--text); background:#11110f; }
-    .gallery { display:grid; grid-template-columns:repeat(12,1fr); gap:18px; align-items:start; }
-    .work { margin:0; grid-column:span 4; background:#080909; border:1px solid rgba(255,255,255,.08); }
-    .work:nth-child(1), .work:nth-child(4), .work:nth-child(12), .work:nth-child(21) { grid-column:span 6; }
-    .image-button { display:block; width:100%; padding:0; margin:0; border:0; background:transparent; cursor:zoom-in; color:inherit; }
-    .work img { width:100%; display:block; aspect-ratio: 4/5; object-fit:cover; background:#111; }
-    .work:nth-child(1) img, .work:nth-child(4) img, .work:nth-child(12) img, .work:nth-child(21) img { aspect-ratio: 16/10; }
-    figcaption { padding:18px 18px 20px; min-height:88px; }
-    figcaption span { display:block; color:var(--muted); font-size:11px; letter-spacing:.28em; text-transform:uppercase; margin-bottom:9px; }
-    figcaption strong { font-size:20px; letter-spacing:-.02em; }
-    .about { display:grid; grid-template-columns:1fr 1fr; gap:40px; padding:70px 0; border-top:1px solid var(--line); }
-    .about p { color:#d6d1c7; line-height:1.7; font-size:18px; margin-top:0; }
-    .contact { color:var(--muted); line-height:1.8; }
-    footer { max-width:1240px; margin:0 auto; padding:40px 22px 70px; color:#777166; border-top:1px solid var(--line); font-size:12px; letter-spacing:.16em; text-transform:uppercase; }
-    .lightbox { position:fixed; inset:0; z-index:50; background:rgba(0,0,0,.92); display:none; align-items:center; justify-content:center; padding:28px; }
-    .lightbox.open { display:flex; }
-    .lightbox img { max-width:92vw; max-height:82vh; object-fit:contain; }
-    .lightbox-caption { position:absolute; left:28px; bottom:24px; color:#d8d2c6; letter-spacing:.08em; }
-    .lightbox-close { position:absolute; top:20px; right:20px; width:44px; height:44px; border:1px solid rgba(255,255,255,.3); border-radius:50%; background:rgba(0,0,0,.2); color:white; cursor:pointer; font-size:24px; }
-    .hidden { display:none !important; }
-    @media (max-width: 900px) {
-      .nav { align-items:flex-start; }
-      .nav-links { gap:18px; font-size:11px; letter-spacing:.22em; flex-wrap:wrap; justify-content:flex-end; }
-      .hero { min-height:auto; grid-template-columns:1fr; gap:34px; padding-top:60px; }
-      .hero-image img { aspect-ratio:4/5; }
-      .section-head, .about { grid-template-columns:1fr; display:grid; gap:18px; }
-      .gallery { grid-template-columns:1fr; gap:22px; }
-      .work, .work:nth-child(1), .work:nth-child(4), .work:nth-child(12), .work:nth-child(21) { grid-column:1; }
-      .work img, .work:nth-child(1) img, .work:nth-child(4) img, .work:nth-child(12) img, .work:nth-child(21) img { aspect-ratio:auto; height:auto; max-height:none; object-fit:contain; }
-      .filters { gap:10px; }
-      .filter-btn { width:100%; text-align:center; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: -0.012em;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 22px clamp(18px, 4vw, 56px);
+      background: linear-gradient(to bottom, rgba(16,16,15,.9), rgba(16,16,15,.42), transparent);
+      backdrop-filter: blur(8px);
+    }
+
+    .brand {
+      font-size: 14px;
+      font-weight: 650;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .logo-brand {
+      display: inline-flex;
+      align-items: center;
+      width: 156px;
+      max-width: 42vw;
+    }
+
+    .logo-brand img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .nav a:hover { color: var(--text); }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr);
+      gap: clamp(32px, 5vw, 88px);
+      align-items: end;
+      max-width: 1580px;
+      margin: 0 auto;
+      padding: 124px clamp(18px, 5vw, 76px) 60px;
+    }
+
+    .hero-copy {
+      padding-bottom: clamp(16px, 5vw, 80px);
+    }
+
+    .eyebrow {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 820px;
+      font-size: clamp(54px, 8vw, 126px);
+      line-height: .9;
+      letter-spacing: -0.075em;
+      font-weight: 620;
+    }
+
+    .intro {
+      max-width: 560px;
+      margin: 30px 0 0;
+      color: #d4d1c8;
+      font-size: clamp(17px, 1.55vw, 23px);
+      line-height: 1.48;
+    }
+
+    .hero-image {
+      min-height: min(74vh, 780px);
+      border: 1px solid var(--line);
+      background: #0a0a0a;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      min-height: min(74vh, 780px);
+      object-fit: cover;
+      filter: contrast(1.04) saturate(.9);
+    }
+
+    main { border-top: 1px solid var(--line); }
+
+    .section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: clamp(72px, 9vw, 128px) clamp(18px, 4vw, 42px);
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: minmax(160px, .5fr) minmax(0, 1.5fr);
+      gap: 32px;
+      margin-bottom: 44px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .section-header p {
+      margin: 0;
+      max-width: 840px;
+      font-size: clamp(28px, 4.2vw, 58px);
+      line-height: 1.02;
+      letter-spacing: -0.06em;
+    }
+
+
+    .archive-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: -18px 0 32px;
+      color: var(--muted);
+    }
+
+    .archive-pills span {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      padding: 8px 11px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: -18px 0 34px;
+    }
+
+    .filters button {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      padding: 9px 13px;
+      border-radius: 999px;
+      font: inherit;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .filters button.active,
+    .filters button:hover {
+      color: var(--text);
+      border-color: var(--line-strong);
+      background: rgba(255,255,255,.07);
+    }
+
+    .gallery {
+      columns: 4 260px;
+      column-gap: 14px;
+    }
+
+    .work {
+      position: relative;
+      break-inside: avoid;
+      margin: 0 0 14px;
+      border: 1px solid var(--line);
+      background: var(--bg-2);
+      overflow: hidden;
+    }
+
+    .work.hidden { display: none; }
+
+    .image-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+      text-align: inherit;
+    }
+
+    .image-button img {
+      width: 100%;
+      height: auto;
+      filter: contrast(1.04) saturate(.88);
+      transform: scale(1);
+      transition: transform .5s ease, filter .5s ease;
+    }
+
+    .work:hover .image-button img {
+      transform: scale(1.025);
+      filter: contrast(1.08) saturate(.98);
+    }
+
+    figcaption {
+      display: grid;
+      gap: 6px;
+      padding: 12px 13px 14px;
+      border-top: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+    }
+
+    figcaption span {
+      color: var(--dim);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    figcaption strong {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -.02em;
+    }
+
+    figcaption em {
+      display: none;
+    }
+
+    .statement {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr);
+      gap: clamp(32px, 6vw, 90px);
+      align-items: start;
+    }
+
+    .statement-copy blockquote {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 72px);
+      line-height: 1;
+      letter-spacing: -0.065em;
+    }
+
+    .statement-copy p {
+      margin: 24px 0 0;
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    .statement-image {
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: #0b0b0b;
+    }
+
+    .statement-image img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      filter: contrast(1.05) saturate(.82);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .feature-card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.035);
+    }
+
+    .feature-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      filter: contrast(1.02) saturate(.85);
+    }
+
+    .feature-card div {
+      padding: 14px;
+    }
+
+    .feature-card span {
+      color: var(--dim);
+      font-size: 10px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .feature-card h3 {
+      margin: 8px 0 6px;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -.035em;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: clamp(32px, 6vw, 96px);
+      align-items: start;
+    }
+
+    .about-title {
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+    }
+
+    .about-text {
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+    }
+
+    .about-text p {
+      margin: 0 0 18px;
+      color: #d8d5cc;
+      font-size: clamp(20px, 2.6vw, 34px);
+      line-height: 1.25;
+      letter-spacing: -0.045em;
+    }
+
+
+    .seo-note {
+      max-width: 720px;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+      letter-spacing: -0.01em;
+    }
+
+
+    .contact-intro {
+      margin: 34px 0 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .small-text {
+      max-width: 720px;
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .small-text a {
+      color: var(--text);
+      border-bottom: 1px solid var(--line-strong);
+    }
+
+    .site-footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 38px clamp(18px, 4vw, 42px) 56px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--dim);
+      font-size: 12px;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0,0,0,.93);
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      max-width: 94vw;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+
+    .lightbox button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-size: 26px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .statement,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .statement-image img {
+        height: auto;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .site-header {
+        position: absolute;
+        align-items: flex-start;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px 16px;
+      }
+
+      .section-header {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        columns: 1;
+      }
+
+      .archive-pills {
+        margin-top: -8px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .site-footer {
+        flex-direction: column;
+      }
     }
   </style>
+  <meta name="theme-color" content="#111111">
+
+  
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <meta name="msapplication-TileColor" content="#111111">
+  <meta name="msapplication-TileImage" content="assets/icons/mstile-150x150.png">
+
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="#top"><img src="assets/icons/logo.png" alt="Raven Olisaro logo"><span>Raven Olisaro</span></a>
-      <div class="nav-links"><a href="#archive">Archive</a><a href="#direction">Direction</a><a href="#about">About</a></div>
+    <a class="brand logo-brand" href="#top" aria-label="Raven Olisaro home">
+      <img src="assets/images/raven-olisaro-logo-negative.png" alt="Raven Olisaro">
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#work">Archive</a>
+      <a href="#direction">Direction</a>
+      <a href="#about">About</a>
     </nav>
   </header>
+
   <section class="hero" id="top">
-    <div>
-      <div class="eyebrow">Photography · memory · thresholds · human traces</div>
-      <h1>Places that keep a trace.</h1>
-      <p class="lead">Suspended places, ritual rooms, distant figures. A visual archive of what remains.</p>
+    <div class="hero-copy">
+      <div class="eyebrow">The Trace Archive · Memory · Thresholds · Human Traces</div>
+      <h1>Places that remember.</h1>
+      <p class="intro">A living archive of quiet places, human traces, ritual spaces and landscapes held in memory.</p>
     </div>
-    <figure class="hero-image"><img src="assets/images/green-silence.jpg" alt="Green Silence"></figure>
+    <div class="hero-image">
+      <img src="assets/images/06-green-silence.jpg" alt="Stone bench in a misty green forest after rain" loading="eager">
+    </div>
   </section>
+
   <main>
-    <section id="archive">
-      <div class="section-head"><h2>The Trace Archive</h2><p class="small-text">Images selected for atmosphere, silence and emotional residue.</p></div>
-      <div class="filters" aria-label="Filter photographs"><button class="filter-btn active" type="button" data-filter="all">All</button>
-<button class="filter-btn " type="button" data-filter="ritual">Ritual Spaces</button>
-<button class="filter-btn " type="button" data-filter="silent">Silent Landscapes</button>
-<button class="filter-btn " type="button" data-filter="urban">Urban Voids</button>
-<button class="filter-btn " type="button" data-filter="memory">Memory Rooms</button>
-<button class="filter-btn " type="button" data-filter="human">Human Traces</button>
-<button class="filter-btn " type="button" data-filter="thresholds">Thresholds</button></div>
-      <div class="gallery"><figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/green-silence.jpg" data-title="Green Silence" data-section="Silent Landscapes" aria-label="Open Green Silence">
-    <img src="assets/images/green-silence-thumb.jpg" alt="Green Silence" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Green Silence</strong></figcaption>
-</figure>
-<figure class="work" data-category="thresholds">
-  <button class="image-button" type="button" data-full="assets/images/lit-threshold.jpg" data-title="Lit Threshold" data-section="Thresholds" aria-label="Open Lit Threshold">
-    <img src="assets/images/lit-threshold-thumb.jpg" alt="Lit Threshold" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Thresholds</span><strong>Lit Threshold</strong></figcaption>
-</figure>
-<figure class="work" data-category="memory">
-  <button class="image-button" type="button" data-full="assets/images/catacomb.jpg" data-title="Catacomb" data-section="Memory Rooms" aria-label="Open Catacomb">
-    <img src="assets/images/catacomb-thumb.jpg" alt="Catacomb" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Memory Rooms</span><strong>Catacomb</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/ice-figure.jpg" data-title="Ice Figure" data-section="Silent Landscapes" aria-label="Open Ice Figure">
-    <img src="assets/images/ice-figure-thumb.jpg" alt="Ice Figure" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Ice Figure</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/salt-moon.jpg" data-title="Salt Moon" data-section="Silent Landscapes" aria-label="Open Salt Moon">
-    <img src="assets/images/salt-moon-thumb.jpg" alt="Salt Moon" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Salt Moon</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/mist-village.jpg" data-title="Mist Village" data-section="Silent Landscapes" aria-label="Open Mist Village">
-    <img src="assets/images/mist-village-thumb.jpg" alt="Mist Village" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Mist Village</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/forest-road.jpg" data-title="Forest Road" data-section="Silent Landscapes" aria-label="Open Forest Road">
-    <img src="assets/images/forest-road-thumb.jpg" alt="Forest Road" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Forest Road</strong></figcaption>
-</figure>
-<figure class="work" data-category="memory">
-  <button class="image-button" type="button" data-full="assets/images/stone-kitchen.jpg" data-title="Stone Kitchen" data-section="Memory Rooms" aria-label="Open Stone Kitchen">
-    <img src="assets/images/stone-kitchen-thumb.jpg" alt="Stone Kitchen" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Memory Rooms</span><strong>Stone Kitchen</strong></figcaption>
-</figure>
-<figure class="work" data-category="ritual">
-  <button class="image-button" type="button" data-full="assets/images/griffin-room.jpg" data-title="Griffin Room" data-section="Ritual Spaces" aria-label="Open Griffin Room">
-    <img src="assets/images/griffin-room-thumb.jpg" alt="Griffin Room" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Ritual Spaces</span><strong>Griffin Room</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/laguna.jpg" data-title="Laguna" data-section="Silent Landscapes" aria-label="Open Laguna">
-    <img src="assets/images/laguna-thumb.jpg" alt="Laguna" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Laguna</strong></figcaption>
-</figure>
-<figure class="work" data-category="ritual">
-  <button class="image-button" type="button" data-full="assets/images/boudha-stupa.jpg" data-title="Boudha Stupa" data-section="Ritual Spaces" aria-label="Open Boudha Stupa">
-    <img src="assets/images/boudha-stupa-thumb.jpg" alt="Boudha Stupa" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Ritual Spaces</span><strong>Boudha Stupa</strong></figcaption>
-</figure>
-<figure class="work" data-category="ritual">
-  <button class="image-button" type="button" data-full="assets/images/dressing.jpg" data-title="Dressing" data-section="Ritual Spaces" aria-label="Open Dressing">
-    <img src="assets/images/dressing-thumb.jpg" alt="Dressing" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Ritual Spaces</span><strong>Dressing</strong></figcaption>
-</figure>
-<figure class="work" data-category="human">
-  <button class="image-button" type="button" data-full="assets/images/typical-hat.jpg" data-title="Typical Hat" data-section="Human Traces" aria-label="Open Typical Hat">
-    <img src="assets/images/typical-hat-thumb.jpg" alt="Typical Hat" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Human Traces</span><strong>Typical Hat</strong></figcaption>
-</figure>
-<figure class="work" data-category="human">
-  <button class="image-button" type="button" data-full="assets/images/silent-worker.jpg" data-title="Silent Worker" data-section="Human Traces" aria-label="Open Silent Worker">
-    <img src="assets/images/silent-worker-thumb.jpg" alt="Silent Worker" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Human Traces</span><strong>Silent Worker</strong></figcaption>
-</figure>
-<figure class="work" data-category="human">
-  <button class="image-button" type="button" data-full="assets/images/red-child.jpg" data-title="Red Child" data-section="Human Traces" aria-label="Open Red Child">
-    <img src="assets/images/red-child-thumb.jpg" alt="Red Child" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Human Traces</span><strong>Red Child</strong></figcaption>
-</figure>
-<figure class="work" data-category="human">
-  <button class="image-button" type="button" data-full="assets/images/reading-man.jpg" data-title="Reading Man" data-section="Human Traces" aria-label="Open Reading Man">
-    <img src="assets/images/reading-man-thumb.jpg" alt="Reading Man" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Human Traces</span><strong>Reading Man</strong></figcaption>
-</figure>
-<figure class="work" data-category="thresholds">
-  <button class="image-button" type="button" data-full="assets/images/threshold-green.jpg" data-title="Green Threshold" data-section="Thresholds" aria-label="Open Green Threshold">
-    <img src="assets/images/threshold-green-thumb.jpg" alt="Green Threshold" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Thresholds</span><strong>Green Threshold</strong></figcaption>
-</figure>
-<figure class="work" data-category="ritual">
-  <button class="image-button" type="button" data-full="assets/images/ritual-table.jpg" data-title="Ritual Table" data-section="Ritual Spaces" aria-label="Open Ritual Table">
-    <img src="assets/images/ritual-table-thumb.jpg" alt="Ritual Table" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Ritual Spaces</span><strong>Ritual Table</strong></figcaption>
-</figure>
-<figure class="work" data-category="thresholds">
-  <button class="image-button" type="button" data-full="assets/images/barga-bridge.jpg" data-title="Stone Bridge" data-section="Thresholds" aria-label="Open Stone Bridge">
-    <img src="assets/images/barga-bridge-thumb.jpg" alt="Stone Bridge" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Thresholds</span><strong>Stone Bridge</strong></figcaption>
-</figure>
-<figure class="work" data-category="memory">
-  <button class="image-button" type="button" data-full="assets/images/inner-window.jpg" data-title="Inner Window" data-section="Memory Rooms" aria-label="Open Inner Window">
-    <img src="assets/images/inner-window-thumb.jpg" alt="Inner Window" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Memory Rooms</span><strong>Inner Window</strong></figcaption>
-</figure>
-<figure class="work" data-category="human">
-  <button class="image-button" type="button" data-full="assets/images/night-kitchen.jpg" data-title="Night Kitchen" data-section="Human Traces" aria-label="Open Night Kitchen">
-    <img src="assets/images/night-kitchen-thumb.jpg" alt="Night Kitchen" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Human Traces</span><strong>Night Kitchen</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/giant-tree.jpg" data-title="Old Root" data-section="Silent Landscapes" aria-label="Open Old Root">
-    <img src="assets/images/giant-tree-thumb.jpg" alt="Old Root" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Old Root</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/hidden-cow.jpg" data-title="Hidden Field" data-section="Silent Landscapes" aria-label="Open Hidden Field">
-    <img src="assets/images/hidden-cow-thumb.jpg" alt="Hidden Field" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Hidden Field</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/blue-lake.jpg" data-title="Blue Lake" data-section="Silent Landscapes" aria-label="Open Blue Lake">
-    <img src="assets/images/blue-lake-thumb.jpg" alt="Blue Lake" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Blue Lake</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/salar-cactus.jpg" data-title="Salar Cactus" data-section="Silent Landscapes" aria-label="Open Salar Cactus">
-    <img src="assets/images/salar-cactus-thumb.jpg" alt="Salar Cactus" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Salar Cactus</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/birds-snow.jpg" data-title="Birds Over Snow" data-section="Silent Landscapes" aria-label="Open Birds Over Snow">
-    <img src="assets/images/birds-snow-thumb.jpg" alt="Birds Over Snow" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Birds Over Snow</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/architecture-void.jpg" data-title="Urban Cut" data-section="Urban Voids" aria-label="Open Urban Cut">
-    <img src="assets/images/architecture-void-thumb.jpg" alt="Urban Cut" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Urban Cut</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/art-students.jpg" data-title="Art Students" data-section="Urban Voids" aria-label="Open Art Students">
-    <img src="assets/images/art-students-thumb.jpg" alt="Art Students" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Art Students</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/broadway-shadow.jpg" data-title="Broadway Shadow" data-section="Urban Voids" aria-label="Open Broadway Shadow">
-    <img src="assets/images/broadway-shadow-thumb.jpg" alt="Broadway Shadow" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Broadway Shadow</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/un-po-di-piu.jpg" data-title="Un Po Di Più" data-section="Urban Voids" aria-label="Open Un Po Di Più">
-    <img src="assets/images/un-po-di-piu-thumb.jpg" alt="Un Po Di Più" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Un Po Di Più</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/market-dome.jpg" data-title="Market Dome" data-section="Urban Voids" aria-label="Open Market Dome">
-    <img src="assets/images/market-dome-thumb.jpg" alt="Market Dome" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Market Dome</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/stone-windows.jpg" data-title="Stone Windows" data-section="Urban Voids" aria-label="Open Stone Windows">
-    <img src="assets/images/stone-windows-thumb.jpg" alt="Stone Windows" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Stone Windows</strong></figcaption>
-</figure>
-<figure class="work" data-category="human">
-  <button class="image-button" type="button" data-full="assets/images/riot.jpg" data-title="Riot" data-section="Human Traces" aria-label="Open Riot">
-    <img src="assets/images/riot-thumb.jpg" alt="Riot" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Human Traces</span><strong>Riot</strong></figcaption>
-</figure>
-<figure class="work" data-category="thresholds">
-  <button class="image-button" type="button" data-full="assets/images/venus.jpg" data-title="Venus" data-section="Thresholds" aria-label="Open Venus">
-    <img src="assets/images/venus-thumb.jpg" alt="Venus" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Thresholds</span><strong>Venus</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/sea-gold.jpg" data-title="Sea Gold" data-section="Silent Landscapes" aria-label="Open Sea Gold">
-    <img src="assets/images/sea-gold-thumb.jpg" alt="Sea Gold" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Sea Gold</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/parliament-night.jpg" data-title="Parliament Night" data-section="Urban Voids" aria-label="Open Parliament Night">
-    <img src="assets/images/parliament-night-thumb.jpg" alt="Parliament Night" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Parliament Night</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/genoa-night.jpg" data-title="Genoa Night" data-section="Urban Voids" aria-label="Open Genoa Night">
-    <img src="assets/images/genoa-night-thumb.jpg" alt="Genoa Night" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Genoa Night</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/blue-church.jpg" data-title="Blue Church" data-section="Urban Voids" aria-label="Open Blue Church">
-    <img src="assets/images/blue-church-thumb.jpg" alt="Blue Church" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Blue Church</strong></figcaption>
-</figure>
-<figure class="work" data-category="ritual">
-  <button class="image-button" type="button" data-full="assets/images/cathedral-cross.jpg" data-title="Cathedral Cross" data-section="Ritual Spaces" aria-label="Open Cathedral Cross">
-    <img src="assets/images/cathedral-cross-thumb.jpg" alt="Cathedral Cross" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Ritual Spaces</span><strong>Cathedral Cross</strong></figcaption>
-</figure>
-<figure class="work" data-category="thresholds">
-  <button class="image-button" type="button" data-full="assets/images/road-line.jpg" data-title="Road Line" data-section="Thresholds" aria-label="Open Road Line">
-    <img src="assets/images/road-line-thumb.jpg" alt="Road Line" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Thresholds</span><strong>Road Line</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/balloon.jpg" data-title="Balloon" data-section="Silent Landscapes" aria-label="Open Balloon">
-    <img src="assets/images/balloon-thumb.jpg" alt="Balloon" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Balloon</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/dark-tree.jpg" data-title="Dark Tree" data-section="Silent Landscapes" aria-label="Open Dark Tree">
-    <img src="assets/images/dark-tree-thumb.jpg" alt="Dark Tree" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Dark Tree</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/blue-geyser.jpg" data-title="Blue Geyser" data-section="Silent Landscapes" aria-label="Open Blue Geyser">
-    <img src="assets/images/blue-geyser-thumb.jpg" alt="Blue Geyser" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Blue Geyser</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/smoke.jpg" data-title="Smoke" data-section="Silent Landscapes" aria-label="Open Smoke">
-    <img src="assets/images/smoke-thumb.jpg" alt="Smoke" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Smoke</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/empty-lagoon.jpg" data-title="Empty Lagoon" data-section="Silent Landscapes" aria-label="Open Empty Lagoon">
-    <img src="assets/images/empty-lagoon-thumb.jpg" alt="Empty Lagoon" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Empty Lagoon</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/pink-building.jpg" data-title="Pink Building" data-section="Urban Voids" aria-label="Open Pink Building">
-    <img src="assets/images/pink-building-thumb.jpg" alt="Pink Building" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Pink Building</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/pixel-guard.jpg" data-title="Pixel Guard" data-section="Urban Voids" aria-label="Open Pixel Guard">
-    <img src="assets/images/pixel-guard-thumb.jpg" alt="Pixel Guard" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Pixel Guard</strong></figcaption>
-</figure>
-<figure class="work" data-category="urban">
-  <button class="image-button" type="button" data-full="assets/images/neon-cube.jpg" data-title="Neon Cube" data-section="Urban Voids" aria-label="Open Neon Cube">
-    <img src="assets/images/neon-cube-thumb.jpg" alt="Neon Cube" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Urban Voids</span><strong>Neon Cube</strong></figcaption>
-</figure>
-<figure class="work" data-category="human">
-  <button class="image-button" type="button" data-full="assets/images/basket-walker.jpg" data-title="Basket Walker" data-section="Human Traces" aria-label="Open Basket Walker">
-    <img src="assets/images/basket-walker-thumb.jpg" alt="Basket Walker" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Human Traces</span><strong>Basket Walker</strong></figcaption>
-</figure>
-<figure class="work" data-category="silent">
-  <button class="image-button" type="button" data-full="assets/images/snow-tree.jpg" data-title="Snow Tree" data-section="Silent Landscapes" aria-label="Open Snow Tree">
-    <img src="assets/images/snow-tree-thumb.jpg" alt="Snow Tree" loading="lazy" width="700">
-  </button>
-  <figcaption><span>Silent Landscapes</span><strong>Snow Tree</strong></figcaption>
-</figure></div>
+    <section class="section" id="work">
+      <div class="section-header">
+        <h2>The Trace Archive</h2>
+        <p>An evolving repository of selected photographs: places, figures, rituals, thresholds and atmospheric landscapes.</p>
+      </div>
+      <div class="archive-pills" aria-label="Archive themes">
+        <span>Thresholds</span>
+        <span>Human Traces</span>
+        <span>Ritual Spaces</span>
+        <span>Silent Landscapes</span>
+        <span>Urban Voids</span>
+        <span>Memory Rooms</span>
+      </div>
+
+      <div class="gallery">
+        
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/06-green-silence.jpg">
+          <button class="image-button" type="button" aria-label="Open Green Silence">
+            <img src="assets/images/06-green-silence-thumb.jpg" data-full="assets/images/06-green-silence.jpg" alt="Stone bench in a misty green forest after rain" loading="lazy" width="1365" height="2048">
+          </button>
+          <figcaption>
+            <span>Atmospheres</span>
+            <strong>Green Silence</strong>
+            <em>A quiet place after rain.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/05-catacomb.jpg">
+          <button class="image-button" type="button" aria-label="Open Catacomb">
+            <img src="assets/images/05-catacomb-thumb.jpg" data-full="assets/images/05-catacomb.jpg" alt="Catacomb room with preserved bodies and skulls arranged along the walls" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Catacomb</strong>
+            <em>Bodies, time, preservation.</em>
+          </figcaption>
+        </figure>
+
+<figure class="work" data-category="Places" data-full="assets/images/01-threshold-green.jpg">
+          <button class="image-button" type="button" aria-label="Open Threshold">
+            <img src="assets/images/01-threshold-green-thumb.jpg" data-full="assets/images/01-threshold-green.jpg" alt="Stone archway and iron railing opening onto green trees and water" loading="lazy" width="1365" height="2048">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Threshold</strong>
+            <em>Stone, shadow, green light.</em>
+          </figcaption>
+        </figure>
+        <figure class="work" data-category="Human Traces" data-full="assets/images/24-child-threshold.jpg">
+          <button class="image-button" type="button" aria-label="Open Child at Threshold">
+            <img src="assets/images/24-child-threshold-thumb.jpg" data-full="assets/images/24-child-threshold.jpg" alt="Black and white photograph of a child standing at a doorway beside a brick wall" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Human Traces</span>
+            <strong>Child at Threshold</strong>
+            <em>A figure held between doorway and street.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/13-blue-fog.jpg">
+          <button class="image-button" type="button" aria-label="Open Blue Fog">
+            <img src="assets/images/13-blue-fog-thumb.jpg" data-full="assets/images/13-blue-fog.jpg" alt="Moody village on a cliff with blue storm clouds and fog" loading="lazy" width="2048" height="1536">
+          </button>
+          <figcaption>
+            <span>Atmospheres</span>
+            <strong>Blue Fog</strong>
+            <em>A village suspended in storm light.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Human Traces" data-full="assets/images/14-ice-figure.jpg">
+          <button class="image-button" type="button" aria-label="Open Ice Figure">
+            <img src="assets/images/14-ice-figure-thumb.jpg" data-full="assets/images/14-ice-figure.jpg" alt="Solitary figure standing on a frozen surface under pale light" loading="lazy" width="1536" height="2048">
+          </button>
+          <figcaption>
+            <span>Human Traces</span>
+            <strong>Ice Figure</strong>
+            <em>A body facing a silent surface.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Human Traces" data-full="assets/images/10-salar-cactus.jpg">
+          <button class="image-button" type="button" aria-label="Open Salar">
+            <img src="assets/images/10-salar-cactus-thumb.jpg" data-full="assets/images/10-salar-cactus.jpg" alt="Seated figure among tall cactus plants overlooking a salt flat" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Human Traces</span>
+            <strong>Salar</strong>
+            <em>A figure among cactus and salt.</em>
+          </figcaption>
+        </figure>
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/22-moon-salt-flat.jpg">
+          <button class="image-button" type="button" aria-label="Open Moon Salt Flat">
+            <img src="assets/images/22-moon-salt-flat-thumb.jpg" data-full="assets/images/22-moon-salt-flat.jpg" alt="Minimal salt flat landscape with a pale moon rising over distant mountains" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Atmospheres</span>
+            <strong>Moon Salt Flat</strong>
+            <em>A pale moon over a silent salt horizon.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Human Traces" data-full="assets/images/20-typical-hat.jpg">
+          <button class="image-button" type="button" aria-label="Open Typical Hat">
+            <img src="assets/images/20-typical-hat-thumb.jpg" data-full="assets/images/20-typical-hat.jpg" alt="Profile portrait of an older man in a patterned cap against a dark wall" loading="lazy" width="2047" height="1365">
+          </button>
+          <figcaption>
+            <span>Human Traces</span>
+            <strong>Typical Hat</strong>
+            <em>A profile against a dark wall.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/04-stone-kitchen.jpg">
+          <button class="image-button" type="button" aria-label="Open Stone Kitchen">
+            <img src="assets/images/04-stone-kitchen-thumb.jpg" data-full="assets/images/04-stone-kitchen.jpg" alt="Stone kitchen interior with window light, tools and domestic objects" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Stone Kitchen</strong>
+            <em>Domestic memory, stone and window light.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/03-griffin-room.jpg">
+          <button class="image-button" type="button" aria-label="Open Griffin Room">
+            <img src="assets/images/03-griffin-room-thumb.jpg" data-full="assets/images/03-griffin-room.jpg" alt="Dark historic interior with a yellow griffin banner and table objects" loading="lazy" width="1365" height="2048">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Griffin Room</strong>
+            <em>A dark interior held by a single symbol.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Human Traces" data-full="assets/images/08-woman-hat.jpg">
+          <button class="image-button" type="button" aria-label="Open Woman with Hat">
+            <img src="assets/images/08-woman-hat-thumb.jpg" data-full="assets/images/08-woman-hat.jpg" alt="Portrait of a woman in a bowler hat and purple shawl against a white wall" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Human Traces</span>
+            <strong>Woman with Hat</strong>
+            <em>Portrait, color, distance.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/21-venus.jpg">
+          <button class="image-button" type="button" aria-label="Open Venus">
+            <img src="assets/images/21-venus-thumb.jpg" data-full="assets/images/21-venus.jpg" alt="Waterfront scene at violet dusk with a translucent net in the foreground" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Atmospheres</span>
+            <strong>Venus</strong>
+            <em>Water, veil and violet dusk.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/17-freebird.jpg">
+          <button class="image-button" type="button" aria-label="Open Freebird">
+            <img src="assets/images/17-freebird-thumb.jpg" data-full="assets/images/17-freebird.jpg" alt="Dark architectural silhouette and birds against a dramatic sunset sky" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Atmospheres</span>
+            <strong>Freebird</strong>
+            <em>Silhouette, dusk, open sky.</em>
+          </figcaption>
+        </figure>
+        <figure class="work" data-category="Places" data-full="assets/images/23-urban-void.jpg">
+          <button class="image-button" type="button" aria-label="Open Urban Void">
+            <img src="assets/images/23-urban-void-thumb.jpg" data-full="assets/images/23-urban-void.jpg" alt="Dark urban architectural passage with tall buildings and a narrow bright sky opening" loading="lazy" width="1365" height="2048">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Urban Void</strong>
+            <em>Architecture as shadow, passage and distance.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/02-yellow-line.jpg">
+          <button class="image-button" type="button" aria-label="Open Yellow Line">
+            <img src="assets/images/02-yellow-line-thumb.jpg" data-full="assets/images/02-yellow-line.jpg" alt="Minimal architectural wall with a yellow horizontal line, door and mailbox" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Yellow Line</strong>
+            <em>A minimal wall, a door, a line.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/12-snow-birds.jpg">
+          <button class="image-button" type="button" aria-label="Open Snow Birds">
+            <img src="assets/images/12-snow-birds-thumb.jpg" data-full="assets/images/12-snow-birds.jpg" alt="Snowy landscape with birds flying over rock formations" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Atmospheres</span>
+            <strong>Snow Birds</strong>
+            <em>A cold landscape crossed by flight.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Atmospheres" data-full="assets/images/09-flamingos.jpg">
+          <button class="image-button" type="button" aria-label="Open Laguna">
+            <img src="assets/images/09-flamingos-thumb.jpg" data-full="assets/images/09-flamingos.jpg" alt="Flamingos feeding in a high-altitude lagoon with mountains in the background" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Atmospheres</span>
+            <strong>Laguna</strong>
+            <em>Water, animals and altitude.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/15-boudha-stupa.jpg">
+          <button class="image-button" type="button" aria-label="Open Boudha Stupa">
+            <img src="assets/images/15-boudha-stupa-thumb.jpg" data-full="assets/images/15-boudha-stupa.jpg" alt="Boudha Stupa with colorful prayer flags crossing the frame" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Boudha Stupa</strong>
+            <em>Color, prayer flags and sacred geometry.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Places" data-full="assets/images/16-dressing.jpg">
+          <button class="image-button" type="button" aria-label="Open Dressing">
+            <img src="assets/images/16-dressing-thumb.jpg" data-full="assets/images/16-dressing.jpg" alt="Children in red clothing performing a ritual gesture near water" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Places</span>
+            <strong>Dressing</strong>
+            <em>Ritual, water and red cloth.</em>
+          </figcaption>
+        </figure>
+
+
+        <figure class="work" data-category="Human Traces" data-full="assets/images/19-riot.jpg">
+          <button class="image-button" type="button" aria-label="Open Riot">
+            <img src="assets/images/19-riot-thumb.jpg" data-full="assets/images/19-riot.jpg" alt="Night street demonstration with people holding multilingual peace signs" loading="lazy" width="2048" height="1365">
+          </button>
+          <figcaption>
+            <span>Human Traces</span>
+            <strong>Riot</strong>
+            <em>Night, signs, collective movement.</em>
+          </figcaption>
+        </figure>
+      </div>
     </section>
-    <section id="direction" class="about">
-      <div><h2>Direction</h2></div>
-      <div><p>Follow the threshold: places before or after presence. Rooms, paths, ritual objects, distant bodies, dark greens, cold blues, stone, fog, glass and silence.</p></div>
+
+    <section class="section" id="direction">
+      <div class="statement">
+        <div class="statement-copy">
+          <blockquote>Thresholds. Ritual spaces. Human traces. Landscapes as memory.</blockquote>
+          <p>The archive is organized by atmosphere rather than genre. Images enter the sequence when place, figure and light create distance.</p>
+        </div>
+        <div class="statement-image">
+          <img src="assets/images/05-catacomb.jpg" alt="Catacomb room with preserved bodies and skulls arranged along the walls" loading="lazy">
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <img src="assets/images/01-threshold-green-thumb.jpg" alt="Stone archway and iron railing opening onto green trees and water" loading="lazy">
+          <div>
+            <span>Places</span>
+            <h3>Threshold</h3>
+            <p>Stone, shadow, green light.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <img src="assets/images/05-catacomb-thumb.jpg" alt="Catacomb room with preserved bodies and skulls arranged along the walls" loading="lazy">
+          <div>
+            <span>Places</span>
+            <h3>Catacomb</h3>
+            <p>Bodies, time, preservation.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <img src="assets/images/10-salar-cactus-thumb.jpg" alt="Seated figure among tall cactus plants overlooking a salt flat" loading="lazy">
+          <div>
+            <span>Human Traces</span>
+            <h3>Salar</h3>
+            <p>A figure among cactus and salt.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <img src="assets/images/13-blue-fog-thumb.jpg" alt="Moody village on a cliff with blue storm clouds and fog" loading="lazy">
+          <div>
+            <span>Atmospheres</span>
+            <h3>Blue Fog</h3>
+            <p>A village suspended in storm light.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <img src="assets/images/14-ice-figure-thumb.jpg" alt="Solitary figure standing on a frozen surface under pale light" loading="lazy">
+          <div>
+            <span>Human Traces</span>
+            <h3>Ice Figure</h3>
+            <p>A body facing a silent surface.</p>
+          </div>
+        </article>
+      </div>
     </section>
-    <section id="about" class="about">
-      <div><h2>About</h2></div>
-      <div><p>Raven Olisaro collects scenes where memory seems to remain attached to matter.</p><div class="contact"><a href="mailto:karloparillo@gmail.com">karloparillo@gmail.com</a><br><a href="https://www.instagram.com/ravenolisaro/">@ravenolisaro</a></div></div>
+
+    <section class="section" id="about">
+      <div class="about">
+        <div class="about-title">
+          <h2>About</h2>
+        </div>
+        <div class="about-text">
+          <p>Raven Olisaro is a photographic archive about places that seem to retain a human trace.</p>
+          <p>The work moves through quiet interiors, ritual spaces, thresholds, urban voids and atmospheric landscapes, looking for the point where place becomes memory.</p>
+          
+            <p class="seo-note">The Trace Archive collects selected photographic works across Europe, South America and Asia, following suspended places, ritual gestures, quiet interiors, atmospheric landscapes and human traces.</p>
+          <p class="contact-intro">For prints, collaborations, archive selections or selected projects:</p>
+          <div class="small-text">
+            Contact: <a href="mailto:karloparillo@gmail.com">karloparillo@gmail.com</a><br>
+            Instagram: <a href="https://www.instagram.com/ravenolisaro/" target="_blank" rel="noopener">@ravenolisaro</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-  <footer>Raven Olisaro — The Trace Archive</footer>
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <button class="lightbox-close" type="button" aria-label="Close image">×</button>
-    <img alt="">
-    <div class="lightbox-caption"></div>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Raven Olisaro</span>
+    <span>The Trace Archive</span>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" aria-label="Close image">×</button>
+    <img src="" alt="">
   </div>
+
   <script>
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const works = document.querySelectorAll('.work');
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filter = button.dataset.filter;
-        filterButtons.forEach(b => b.classList.remove('active'));
-        button.classList.add('active');
-        works.forEach(work => {
-          const show = filter === 'all' || work.dataset.category === filter;
-          work.classList.toggle('hidden', !show);
-        });
+    document.getElementById("year").textContent = new Date().getFullYear();
+});
+    });
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = lightbox.querySelector("img");
+    const closeButton = lightbox.querySelector("button");
+
+    document.querySelectorAll(".image-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const img = button.querySelector("img");
+        lightboxImage.src = img.dataset.full;
+        lightboxImage.alt = img.alt;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
       });
     });
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-    const lightboxCaption = lightbox.querySelector('.lightbox-caption');
-    document.querySelectorAll('.image-button').forEach(button => {
-      button.addEventListener('click', () => {
-        lightboxImg.src = button.dataset.full;
-        lightboxImg.alt = button.dataset.title;
-        lightboxCaption.textContent = button.dataset.section + ' — ' + button.dataset.title;
-        lightbox.classList.add('open');
-      });
-    });
+
     function closeLightbox() {
-      lightbox.classList.remove('open');
-      lightboxImg.removeAttribute('src');
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
     }
-    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    closeButton.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeLightbox();
+    });
   </script>
 </body>
 </html>
