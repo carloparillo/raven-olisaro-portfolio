@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://carloparillo.github.io/raven-olisaro-portfolio/sitemap.xml
