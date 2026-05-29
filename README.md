@@ -192,20 +192,17 @@ Fixed interactive behavior:
 - corrected category mapping and data attributes
 
 
-## Latest image expansion
+## Corrected image expansion
 
-Added nine selected images aligned with The Trace Archive direction:
-- Village in Fog
-- Ancient Roots
-- Glass Threshold
-- Hands at Work
-- Inside, Outside
-- Working Window
-- Coastal Threshold
-- Stone Span
-- Broken Arches
+Added nine selected images with verified source-to-title mapping:
+- 25-village-in-fog — Village in Fog — 2024_12_14_13_42_IMG_0900.jpg
+- 26-ancient-roots — Ancient Roots — _PIC4314.jpg
+- 27-glass-threshold — Glass Threshold — _PIC4221.jpg
+- 28-hands-at-work — Hands at Work — IMG_3270.jpg
+- 29-inside-outside — Inside, Outside — _PIC4990.jpg
+- 30-working-window — Working Window — _PIC4229.jpg
+- 31-coastal-threshold — Coastal Threshold — IMG_3865.jpg
+- 32-stone-span — Stone Span — _PIC2893-Modifica.jpg
+- 33-broken-arches — Broken Arches — _PIC4910.jpg
 
-Selection logic:
-- strengthened Atmospheres, Places, Human Traces and Urban Voids
-- avoided images that were too generic, too bright/color-led, or less coherent with the archive identity
-- preserved existing opening sequence and inserted new works near the top of the archive
+Also preserved the corrected JavaScript behavior for archive filtering and image enlargement.
