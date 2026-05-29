@@ -249,6 +249,49 @@
       letter-spacing: -0.06em;
     }
 
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 28px;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal img {
+      max-width: 94vw;
+      max-height: 90vh;
+      object-fit: contain;
+      box-shadow: 0 20px 80px rgba(0,0,0,.45);
+    }
+
+    .modal-close {
+      position: fixed;
+      top: 18px;
+      right: 22px;
+      background: rgba(255,255,255,.08);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      width: 40px;
+      height: 40px;
+      font-size: 26px;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
     .archive-pills {
       display: flex;
       flex-wrap: wrap;
@@ -280,6 +323,7 @@
     .work.is-hidden {
       display: none;
     }
+
 
 
     .filters {
@@ -649,7 +693,7 @@
         <h2>The Trace Archive</h2>
         <p>An evolving repository of selected photographs: places, figures, rituals, thresholds and atmospheric landscapes.</p>
       </div>
-            <div class="archive-pills filters" aria-label="Archive filters">
+                  <div class="archive-pills filters" aria-label="Archive filters">
         <button type="button" class="active" data-filter="all">All</button>
         <button type="button" data-filter="Places">Places</button>
         <button type="button" data-filter="Human Traces">Human Traces</button>
@@ -991,39 +1035,70 @@
     <img src="" alt="">
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-});
-    });
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons = document.querySelectorAll("[data-filter]");
+      const works = document.querySelectorAll(".work");
 
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = lightbox.querySelector("img");
-    const closeButton = lightbox.querySelector("button");
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.dataset.filter;
 
-    document.querySelectorAll(".image-button").forEach((button) => {
-      button.addEventListener("click", () => {
-        const img = button.querySelector("img");
-        lightboxImage.src = img.dataset.full;
-        lightboxImage.alt = img.alt;
-        lightbox.classList.add("open");
-        lightbox.setAttribute("aria-hidden", "false");
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          works.forEach((work) => {
+            const show = filter === "all" || work.dataset.category === filter;
+            work.classList.toggle("is-hidden", !show);
+          });
+        });
+      });
+
+      const modal = document.querySelector(".modal");
+      const modalImage = document.querySelector(".modal img");
+      const modalClose = document.querySelector(".modal-close");
+      const imageButtons = document.querySelectorAll(".image-button");
+
+      imageButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const img = button.querySelector("img");
+          const full = img.dataset.full || img.src;
+          const alt = img.alt || "";
+          modalImage.src = full;
+          modalImage.alt = alt;
+          modal.classList.add("open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.classList.add("modal-open");
+        });
+      });
+
+      const closeModal = () => {
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+        modalImage.src = "";
+        modalImage.alt = "";
+        document.body.classList.remove("modal-open");
+      };
+
+      modalClose.addEventListener("click", closeModal);
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.classList.contains("open")) {
+          closeModal();
+        }
       });
     });
-
-    function closeLightbox() {
-      lightbox.classList.remove("open");
-      lightbox.setAttribute("aria-hidden", "true");
-      lightboxImage.src = "";
-    }
-
-    closeButton.addEventListener("click", closeLightbox);
-    lightbox.addEventListener("click", (event) => {
-      if (event.target === lightbox) closeLightbox();
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeLightbox();
-    });
   </script>
+  <div class="modal" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <button class="modal-close" type="button" aria-label="Close image preview">×</button>
+    <img src="" alt="">
+  </div>
+
 </body>
 </html>

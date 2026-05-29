@@ -181,3 +181,12 @@ Fixed archive filters:
   - Ritual Spaces
   - Atmospheres
   - Urban Voids
+
+
+## Latest JavaScript fix
+
+Fixed interactive behavior:
+- archive filters now filter images correctly
+- image click opens full-size modal preview
+- Escape key / close button / background click close the modal
+- corrected category mapping and data attributes
