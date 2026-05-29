@@ -167,3 +167,60 @@ Included changes:
 - made the gallery denser and more archive-like
 - updated About and CTA language
 - preserved current images, raven favicon, sitemap, robots.txt and SEO files
+
+
+## Expanded archive update
+
+This package adds the following selected photographs to The Trace Archive:
+
+- Lit Threshold
+- Fog Village
+- Luminous Cube
+- Pixel Gate
+- Twilight Tree
+- Clay Worker
+- Newspaper Bench
+
+Structural updates:
+
+- Reordered the archive sequence to place the strongest and most coherent images earlier.
+- Reclassified captions around six archive pillars: Thresholds, Human Traces, Ritual Spaces, Silent Landscapes, Urban Voids and Memory Rooms.
+- Updated the Direction feature cards to reflect the expanded archive.
+- Fixed the lightbox JavaScript block.
+- Preserved Green Silence as the homepage hero image.
+- Preserved Laguna, Boudha Stupa and Dressing.
+
+
+## Mobile verified build — 2026-05-29
+
+This build fixes mobile/gallery visibility by:
+- replacing CSS masonry columns with a responsive CSS grid
+- forcing one-column layout on mobile
+- making image display rules explicit
+- removing possible early lazy-loading blanks from the first archive images
+- preserving Green Silence as the hero image
+- preserving all expanded archive images:
+  - Lit Threshold
+  - Fog Village
+  - Luminous Cube
+  - Pixel Gate
+  - Twilight Tree
+  - Clay Worker
+  - Newspaper Bench
+
+Important deployment note:
+Upload the full package contents to GitHub, including the complete `assets/` folder. If only `index.html` is uploaded, new photos will not display.
+
+
+## Final archive build — 2026-05-29
+
+This package fixes:
+- mobile image visibility
+- clickable archive filters
+- relative image paths
+- essential/mysterious copy
+- top red line: "Places that remember."
+
+Upload all files and the full `assets/` folder to GitHub Pages.
+Do not upload only `index.html`.
+Keep the Google Search Console verification file if present in the repository.
