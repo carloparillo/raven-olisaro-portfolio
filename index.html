@@ -3,23 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6DJ2FY8TM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-D6DJ2FY8TM');
-  </script>
-
   <title>Raven Olisaro — The Trace Archive</title>
   <meta name="description" content="The Trace Archive by Raven Olisaro: a photographic project and evolving archive of thresholds, ritual spaces, human traces, urban voids and atmospheric landscapes.">
   <meta name="keywords" content="Raven Olisaro, The Trace Archive, photography project, photographic archive, atmospheric photography, human traces photography, ritual spaces photography, thresholds photography, urban voids, fine art photography">
   <meta name="author" content="Raven Olisaro">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#111111">
+  <!-- Google Analytics is loaded only after cookie consent. -->
   <link rel="canonical" href="https://carloparillo.github.io/raven-olisaro-portfolio/">
 
   <meta property="og:title" content="Raven Olisaro — The Trace Archive">
@@ -683,6 +673,95 @@
       pointer-events: none;
     }
 
+
+    .cookie-banner {
+      position: fixed;
+      left: clamp(14px, 3vw, 34px);
+      right: clamp(14px, 3vw, 34px);
+      bottom: clamp(14px, 3vw, 34px);
+      z-index: 120;
+      display: none;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 18px;
+      border: 1px solid var(--line-strong);
+      background: rgba(16,16,15,.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 18px 70px rgba(0,0,0,.36);
+    }
+
+    .cookie-banner.is-visible {
+      display: grid;
+    }
+
+    .cookie-copy {
+      display: grid;
+      gap: 5px;
+    }
+
+    .cookie-copy strong {
+      font-size: 14px;
+      letter-spacing: -.01em;
+      color: var(--text);
+    }
+
+    .cookie-copy span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .cookie-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .cookie-actions button,
+    .cookie-settings {
+      border: 1px solid var(--line-strong);
+      background: transparent;
+      color: var(--text);
+      padding: 10px 13px;
+      font-size: 11px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease, border-color .2s ease;
+    }
+
+    .cookie-actions button:hover,
+    .cookie-actions button:focus-visible {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+      outline: none;
+    }
+
+    .cookie-actions .reject {
+      color: var(--muted);
+    }
+
+    .cookie-settings {
+      border: 0;
+      padding: 0;
+      color: var(--dim);
+      background: transparent;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .cookie-settings:hover,
+    .cookie-settings:focus-visible {
+      color: var(--text);
+      outline: none;
+    }
+
     .site-footer {
       max-width: var(--max);
       margin: 0 auto;
@@ -815,6 +894,15 @@
 
       .gallery {
         columns: 1;
+      }
+
+
+      .cookie-banner {
+        grid-template-columns: 1fr;
+      }
+
+      .cookie-actions {
+        justify-content: flex-start;
       }
 
       .site-footer {
@@ -1221,8 +1309,20 @@
     </section>
   </main>
 
+  <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div class="cookie-copy">
+      <strong>Analytics cookies</strong>
+      <span>This site uses Google Analytics only to understand archive visits. You can accept or reject analytics cookies.</span>
+    </div>
+    <div class="cookie-actions">
+      <button class="reject" type="button" data-cookie-choice="reject">Reject</button>
+      <button type="button" data-cookie-choice="accept">Accept</button>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <span>© <span id="year"></span> Raven Olisaro</span>
+    <span><button class="cookie-settings" type="button">Cookie settings</button></span>
     <span>The Trace Archive</span>
   </footer>
 
@@ -1240,8 +1340,70 @@
     </div>
   </div>
 
-  <script>
+    <script>
     document.addEventListener("DOMContentLoaded", () => {
+      const GA_MEASUREMENT_ID = "G-D6DJ2FY8TM";
+      const CONSENT_KEY = "traceArchiveAnalyticsConsent";
+
+      const loadGoogleAnalytics = () => {
+        if (window.traceArchiveAnalyticsLoaded) return;
+        window.traceArchiveAnalyticsLoaded = true;
+
+        const analyticsScript = document.createElement("script");
+        analyticsScript.async = true;
+        analyticsScript.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_MEASUREMENT_ID;
+        document.head.appendChild(analyticsScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag("js", new Date());
+        gtag("config", GA_MEASUREMENT_ID, {
+          anonymize_ip: true
+        });
+      };
+
+      const cookieBanner = document.querySelector(".cookie-banner");
+      const cookieSettings = document.querySelector(".cookie-settings");
+      const cookieChoiceButtons = document.querySelectorAll("[data-cookie-choice]");
+
+      const setCookieChoice = (choice) => {
+        localStorage.setItem(CONSENT_KEY, choice);
+        if (cookieBanner) {
+          cookieBanner.classList.remove("is-visible");
+        }
+
+        if (choice === "accept") {
+          loadGoogleAnalytics();
+        }
+      };
+
+      const showCookieBanner = () => {
+        if (cookieBanner) {
+          cookieBanner.classList.add("is-visible");
+        }
+      };
+
+      const storedConsent = localStorage.getItem(CONSENT_KEY);
+
+      if (storedConsent === "accept") {
+        loadGoogleAnalytics();
+      } else if (storedConsent !== "reject") {
+        showCookieBanner();
+      }
+
+      cookieChoiceButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          setCookieChoice(button.dataset.cookieChoice);
+        });
+      });
+
+      if (cookieSettings) {
+        cookieSettings.addEventListener("click", () => {
+          showCookieBanner();
+        });
+      }
+
       const yearEl = document.getElementById("year");
       if (yearEl) {
         yearEl.textContent = new Date().getFullYear();

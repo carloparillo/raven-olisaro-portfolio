@@ -39,3 +39,16 @@ The contact form is configured to submit to:
 `https://formspree.io/f/xkoeezdv`
 
 If you change the form endpoint in the future, update the `action` attribute of the form in `index.html`.
+
+## Cookie consent and analytics update
+
+This package integrates a minimal cookie consent system for Google Analytics.
+
+Included:
+- cookie banner matching the visual language of the site
+- `Reject` and `Accept` buttons
+- Google Analytics loaded only after explicit `Accept`
+- consent saved in `localStorage` under `traceArchiveAnalyticsConsent`
+- footer link: `Cookie settings`
+- Google Analytics ID: `G-D6DJ2FY8TM`
+- IP anonymization enabled in the GA config
