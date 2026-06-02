@@ -1,0 +1,27 @@
+{
+  "name": "Raven Olisaro — The Trace Archive",
+  "short_name": "Trace Archive",
+  "description": "A photographic project and evolving archive of thresholds, ritual spaces, human traces, urban voids and atmospheric landscapes.",
+  "start_url": "/raven-olisaro-portfolio/",
+  "scope": "/raven-olisaro-portfolio/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
