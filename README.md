@@ -1,54 +1,62 @@
 # Raven Olisaro — The Trace Archive
 
-Static GitHub Pages package for **The Trace Archive**, designed as a coherent photographic project rather than a generic portfolio.
+Static GitHub Pages package for Raven Olisaro / The Trace Archive.
 
-## Main refinements in this package
+## Update included in this package
 
-- stronger curatorial positioning in the hero and archive introduction
-- dedicated **Project Grammar** section to make the photographic direction explicit
-- more editorial archive sequencing
-- filter descriptions for each category
-- more precise **About the Archive** section
-- integrated **Leave a trace** form using Formspree
-- cleaned metadata, valid web manifest and updated sitemap
-- fixed and simplified lightbox / filter / form JavaScript
+This version adds a dedicated **Prints** section for sporadic, manual print requests.
 
-## Included sections
+Implemented:
 
-- Hero
-- Project Grammar
-- Archive
-- Grammar / Direction
-- About the Archive
-- Leave a trace
+- navigation item: `Prints`
+- new page section: `Fine art prints available on request`
+- no e-commerce checkout
+- no cart
+- no “Buy now” button
+- manual request form through Formspree
+- note clarifying that this is not an automated e-commerce service
+- suggested print selection using images already present in `/assets`
+- Google Analytics remains gated behind explicit cookie consent
+- cookie settings link remains in the footer
 
-## Deployment
+## Important deployment note
 
-1. Upload all files to the root of the GitHub repository used for GitHub Pages.
-2. Make sure GitHub Pages is pointing to the correct branch/root.
-3. If the repository URL changes, update these values in `index.html`, `manifest.json`, `robots.txt` and `sitemap.xml`:
-   - canonical URL
-   - Open Graph URL/image paths
-   - sitemap URL
-   - start_url / scope
+This package expects the existing `/assets` folder already present in the GitHub repository to remain in place.
+
+Do not delete the existing `/assets` folder when uploading this update.
+
+Recommended upload method:
+
+1. Open the repository on GitHub.
+2. Upload/replace these files at repository root:
+   - `index.html`
+   - `README.md`
+   - `manifest.json`
+   - `robots.txt`
+   - `sitemap.xml`
+   - `favicon.svg`
+   - `googlebd07545311086ccb.html`
+3. Keep the existing `/assets` folder unchanged.
+4. Commit the update.
+5. Wait for GitHub Pages to redeploy.
 
 ## Form endpoint
 
-The contact form is configured to submit to:
+Forms submit to:
 
 `https://formspree.io/f/xkoeezdv`
 
-If you change the form endpoint in the future, update the `action` attribute of the form in `index.html`.
+Forms included:
 
-## Cookie consent and analytics update
+- archive response form: “Leave a trace”
+- print request form: “Request a print”
 
-This package integrates a minimal cookie consent system for Google Analytics.
+## Analytics
 
-Included:
-- cookie banner matching the visual language of the site
-- `Reject` and `Accept` buttons
-- Google Analytics loaded only after explicit `Accept`
-- consent saved in `localStorage` under `traceArchiveAnalyticsConsent`
-- footer link: `Cookie settings`
-- Google Analytics ID: `G-D6DJ2FY8TM`
-- IP anonymization enabled in the GA config
+Google Analytics ID:
+
+`G-D6DJ2FY8TM`
+
+Analytics is loaded only after explicit `Accept` in the cookie banner. Consent is saved in `localStorage` under:
+
+`traceArchiveAnalyticsConsent`
