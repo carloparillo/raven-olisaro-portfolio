@@ -57,10 +57,10 @@ Included:
 
 Added one new photograph to the online archive:
 
-- `34-tidal-traces.jpg` — **Tidal Traces** — Human Traces
-- Source file: `IMG_6631.jpg`
-- Caption: Small figures crossing a wide coastal distance.
+- `35-all-pedestrians.jpg` — **All Pedestrians** — Urban Voids
+- Source file: `Pedoni.png`
+- Caption: A public mark on a worn urban surface.
 
 Curatorial placement:
-- inserted near the coastal / threshold sequence
-- categorized as Human Traces because the image is driven by two small figures moving through a wide coastal space
+- inserted in the Urban Voids sequence
+- categorized as Urban Voids because the image works as a public sign, a wall trace and an urban surface marked by absence
