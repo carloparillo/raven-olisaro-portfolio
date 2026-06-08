@@ -55,12 +55,11 @@ Included:
 
 ## Latest archive update
 
-Added one new photograph to the online archive:
+Added two new photographs to the online archive:
 
-- `35-all-pedestrians.jpg` — **All Pedestrians** — Urban Voids
-- Source file: `Pedoni.png`
-- Caption: A public mark on a worn urban surface.
+- `36-fog-line.jpg` — **Fog Line** — Atmospheres
+- `37-small-departure.jpg` — **Small Departure** — Human Traces
 
 Curatorial placement:
-- inserted in the Urban Voids sequence
-- categorized as Urban Voids because the image works as a public sign, a wall trace and an urban surface marked by absence
+- `Fog Line` is inserted in the Atmospheres sequence near the fog / suspended landscape works.
+- `Small Departure` is inserted in the Human Traces sequence because the image works through movement, road, vehicle and quiet human passage.
