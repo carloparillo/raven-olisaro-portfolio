@@ -55,11 +55,10 @@ Included:
 
 ## Latest archive update
 
-Added two new photographs to the online archive:
+Replaced the image file for:
 
-- `36-fog-line.jpg` — **Fog Line** — Atmospheres
 - `37-small-departure.jpg` — **Small Departure** — Human Traces
+- New source file: `fiat500_final_pole_removed.jpg`
 
-Curatorial placement:
-- `Fog Line` is inserted in the Atmospheres sequence near the fog / suspended landscape works.
-- `Small Departure` is inserted in the Human Traces sequence because the image works through movement, road, vehicle and quiet human passage.
+The title, category and caption are preserved:
+- Caption: A quiet passage through a rural edge.
