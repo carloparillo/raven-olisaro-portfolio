@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://redlightskyscraper.org/sitemap.xml
+Sitemap: https://carloparillo.github.io/raven-olisaro-portfolio/sitemap.xml

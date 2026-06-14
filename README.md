@@ -1,74 +1,64 @@
-# Red Light Skyscraper — GitHub Pages Website
+# Raven Olisaro — The Trace Archive
 
-Static bilingual website for Red Light Skyscraper.
+Static GitHub Pages package for **The Trace Archive**, designed as a coherent photographic project rather than a generic portfolio.
 
-## Structure
+## Main refinements in this package
 
-- `index.html` — main page
-- `assets/css/style.css` — visual design
-- `assets/js/app.js` — language switch, archive filtering, lazy YouTube/Spotify loading
-- `assets/images/` — optimized WebP images
-- `assets/docs/` — downloadable press kits
-- `data/site.json` — editable site content, links, releases, video IDs, highlights
-- `data/concerts.json` — complete live archive
+- stronger curatorial positioning in the hero and archive introduction
+- dedicated **Project Grammar** section to make the photographic direction explicit
+- more editorial archive sequencing
+- filter descriptions for each category
+- more precise **About the Archive** section
+- integrated **Leave a trace** form using Formspree
+- cleaned metadata, valid web manifest and updated sitemap
+- fixed and simplified lightbox / filter / form JavaScript
 
-## Publish on GitHub Pages
+## Included sections
 
-1. Create a new GitHub repository.
-2. Upload all files in this folder to the repository root.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, select:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-5. Save.
-6. GitHub will generate a Pages URL.
+- Hero
+- Project Grammar
+- Archive
+- Grammar / Direction
+- About the Archive
+- Leave a trace
 
-## Updating content
+## Deployment
 
-Edit `data/site.json` for:
-- bilingual copy
-- social links
-- highlighted tracks
-- videos
-- live highlights
-- press kit paths
+1. Upload all files to the root of the GitHub repository used for GitHub Pages.
+2. Make sure GitHub Pages is pointing to the correct branch/root.
+3. If the repository URL changes, update these values in `index.html`, `manifest.json`, `robots.txt` and `sitemap.xml`:
+   - canonical URL
+   - Open Graph URL/image paths
+   - sitemap URL
+   - start_url / scope
 
-Edit `data/concerts.json` for:
-- live archive entries
+## Form endpoint
 
-Replace images inside `assets/images/`, keeping the same filenames if you do not want to edit paths.
+The contact form is configured to submit to:
 
-## Google Analytics
+`https://formspree.io/f/xkoeezdv`
 
-Google Analytics is not currently loaded.
-When ready, add the Google tag only after adding cookie consent logic.
+If you change the form endpoint in the future, update the `action` attribute of the form in `index.html`.
 
-Recommended future implementation:
-- cookie banner with Accept / Reject
-- localStorage preference
-- load GA only after consent
-- footer link: Cookie settings
+## Cookie consent and analytics update
 
-## Custom domain
+This package integrates a minimal cookie consent system for Google Analytics.
 
-When the final domain is purchased:
-1. Add a `CNAME` file in the repository root containing only the domain, for example:
-   `redlightskyscraper.com`
-2. Configure DNS records according to GitHub Pages instructions.
-3. Set the domain in **Settings → Pages → Custom domain**.
+Included:
+- cookie banner matching the visual language of the site
+- `Reject` and `Accept` buttons
+- Google Analytics loaded only after explicit `Accept`
+- consent saved in `localStorage` under `traceArchiveAnalyticsConsent`
+- footer link: `Cookie settings`
+- Google Analytics ID: `G-D6DJ2FY8TM`
+- IP anonymization enabled in the GA config
 
+## Latest archive update
 
-## Update notes
-- Hero logo changed to visible white/red version.
-- Added Yugen YouTube video.
-- Added visual merch/shop section linking to Bandcamp.
-- Added and prioritized Prog quote in Press & Booking.
+Replaced the image file for:
 
+- `37-small-departure.jpg` — **Small Departure** — Human Traces
+- New source file: `fiat500_final_pole_removed.jpg`
 
-## Version 4 updates
-- Shop section uses one merch image and links directly to Bandcamp merch.
-- Live archive includes a Share photos action for each concert.
-- Share links route to the EN/IT Google Forms with concert context in URL parameters.
-
-Note: Google Forms true field prefill requires the form-specific `entry.xxxxx` IDs. Current links pass contextual URL parameters; replace `buildPhotoFormUrl()` in `assets/js/app.js` with the official pre-filled URL pattern if exact field prefill is required.
+The title, category and caption are preserved:
+- Caption: A quiet passage through a rural edge.
