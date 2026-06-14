@@ -263,7 +263,8 @@ function setLiveCarouselSlide(index) {
   const track = $("#live-carousel-track");
   if (!track) return;
   liveCarouselIndex = (index + liveCarouselImages.length) % liveCarouselImages.length;
-  track.style.transform = `translateX(-${liveCarouselIndex * 100}%)`;
+  const step = 100 / liveCarouselImages.length;
+  track.style.transform = `translate3d(-${liveCarouselIndex * step}%, 0, 0)`;
   $$(".live-carousel-dot").forEach((dot, dotIndex) => {
     dot.classList.toggle("active", dotIndex === liveCarouselIndex);
   });
@@ -279,6 +280,8 @@ function renderLiveCarousel() {
   const track = $("#live-carousel-track");
   const dots = $("#live-carousel-dots");
   if (!carousel || !track || !dots) return;
+
+  track.style.width = `${liveCarouselImages.length * 100}%`;
 
   track.innerHTML = liveCarouselImages.map((src, index) => {
     const meta = parseLivePhoto(src);
