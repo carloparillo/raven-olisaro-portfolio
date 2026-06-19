@@ -55,10 +55,13 @@ Included:
 
 ## Latest archive update
 
-Replaced the image file for:
+Added a new image to the archive:
+
+- `38-arc-light.jpg` — **Arc Light** — Ritual Spaces
+- Caption: A corridor shaped by shadow and patient light.
+
+Previous latest update preserved:
 
 - `37-small-departure.jpg` — **Small Departure** — Human Traces
 - New source file: `fiat500_final_pole_removed.jpg`
-
-The title, category and caption are preserved:
 - Caption: A quiet passage through a rural edge.
