@@ -79,3 +79,16 @@ This package introduces a restrained 2.5D / spatial archive layer:
 - `prefers-reduced-motion` respected
 - footer control: `Reduce motion` / `Enable motion`
 - spatial preference saved in `localStorage` under `traceArchiveSpatialReduced`
+
+## Spatial archive refinement
+
+The first experimental 3D layout has been replaced with a controlled gallery-wall version.
+
+Changes:
+- removed floating / overlapping panel effect
+- removed strong rotation and deep perspective
+- restored a stable readable archive rhythm
+- preserved a subtle sense of depth through hover / interaction only
+- kept filters, lightbox, cookie consent, analytics-after-consent and Formspree form
+- kept mobile layout clean and single-column
+- kept reduced-motion support and footer motion control

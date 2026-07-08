@@ -1085,6 +1085,86 @@
       }
     }
 
+  
+    /* Spatial refinement override.
+       Replaces the experimental floating-panel effect with a controlled
+       gallery-wall layout: no overlap, no aggressive perspective, no broken rhythm. */
+
+    .gallery {
+      columns: 3 300px !important;
+      column-gap: clamp(16px, 2vw, 26px) !important;
+      display: block !important;
+      perspective: none !important;
+      transform-style: flat !important;
+      padding-top: 22px !important;
+      isolation: auto !important;
+    }
+
+    .work,
+    .work:nth-child(n) {
+      display: inline-block !important;
+      width: 100% !important;
+      grid-column: auto !important;
+      break-inside: avoid !important;
+      margin: 0 0 clamp(16px, 2vw, 26px) !important;
+      transform: none !important;
+      box-shadow: 0 14px 38px rgba(0,0,0,.18) !important;
+      transition:
+        transform .28s ease,
+        border-color .25s ease,
+        opacity .25s ease,
+        filter .25s ease !important;
+    }
+
+    .work:hover {
+      transform: translateY(-3px) !important;
+      z-index: auto !important;
+      border-color: rgba(255,255,255,.28) !important;
+    }
+
+    .work.is-hidden {
+      display: none !important;
+    }
+
+    .work .image-button img {
+      transform: none !important;
+      transition: filter .35s ease, opacity .35s ease !important;
+    }
+
+    .work:hover .image-button img {
+      transform: none !important;
+      filter: contrast(1.06) saturate(.96) !important;
+    }
+
+    .spatial-note {
+      grid-template-columns: minmax(120px, .24fr) minmax(0, 1fr);
+      margin-bottom: 22px;
+    }
+
+    body.spatial-reduced .work,
+    body.spatial-reduced .work:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    @media (max-width: 980px) {
+      .gallery {
+        columns: 2 280px !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gallery {
+        columns: 1 !important;
+      }
+
+      .work,
+      .work:nth-child(n) {
+        display: block !important;
+        margin-bottom: 18px !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1158,7 +1238,7 @@
       </div>
 
       <div class="archive-meta">
-        <div class="archive-note">The sequence is arranged as a light spatial archive: images sit like panels in depth, moving slowly with the scroll while preserving the rhythm and clarity of the photographic project.</div>
+        <div class="archive-note">The sequence is arranged as a controlled gallery wall: images keep their rhythm and hierarchy, with only a restrained sense of depth on interaction.</div>
         <div class="archive-count">38 selected works</div>
       </div>
 
@@ -1174,10 +1254,10 @@
       
       <div class="spatial-note" aria-label="Spatial archive note">
         <span>Spatial reading</span>
-        <p>Scroll slowly. The archive uses depth and restrained movement to suggest rooms, thresholds and distance without turning the photographs into an effect.</p>
+        <p>The archive keeps a stable wall layout. Depth is now limited to subtle interaction, so the photographs remain the focus.</p>
       </div>
 
-      <p class="filter-description" id="filter-description">Selected works arranged as a slow spatial archive. The sequence moves from manifesto images to quieter recurrences of place, figure and memory.</p>
+      <p class="filter-description" id="filter-description">Selected works arranged as a controlled visual wall. The sequence moves from manifesto images to quieter recurrences of place, figure and memory.</p>
 
       <div class="gallery">
         <figure class="work" data-category="Atmospheres">
@@ -1539,7 +1619,7 @@
 
   <footer class="site-footer">
     <span>© <span id="year"></span> Raven Olisaro</span>
-    <span><button class="cookie-settings" type="button">Cookie settings</button> · <button class="spatial-toggle" type="button" aria-pressed="false">Reduce motion</button></span>
+    <span><button class="cookie-settings" type="button">Cookie settings</button> · <button class="spatial-toggle" type="button" aria-pressed="false">Reduce subtle motion</button></span>
     <span>The Trace Archive</span>
   </footer>
 
@@ -1634,7 +1714,7 @@
         document.body.classList.toggle("spatial-reduced", isReduced);
         if (spatialToggle) {
           spatialToggle.setAttribute("aria-pressed", String(isReduced));
-          spatialToggle.textContent = isReduced ? "Enable motion" : "Reduce motion";
+          spatialToggle.textContent = isReduced ? "Enable subtle motion" : "Reduce subtle motion";
         }
       };
 
@@ -1666,8 +1746,8 @@
           const center = rect.top + rect.height / 2;
           const progress = (center - viewportHeight / 2) / viewportHeight;
           const clamped = Math.max(-1, Math.min(1, progress));
-          work.style.setProperty("--spatial-y", `${(clamped * -22).toFixed(2)}px`);
-          work.style.setProperty("--spatial-rx", `${(clamped * 1.8).toFixed(2)}deg`);
+          work.style.setProperty("--spatial-y", `${(clamped * -4).toFixed(2)}px`);
+          work.style.setProperty("--spatial-rx", `${(clamped * 0.35).toFixed(2)}deg`);
           work.style.setProperty("--spatial-order", index);
         });
       };
@@ -1687,7 +1767,7 @@
       window.addEventListener("resize", requestSpatialUpdate);
 
       const filterDescriptions = {
-        all: "Selected works arranged as a slow spatial archive. The sequence moves from manifesto images to quieter recurrences of place, figure and memory.",
+        all: "Selected works arranged as a controlled visual wall. The sequence moves from manifesto images to quieter recurrences of place, figure and memory.",
         "Places": "Places held by silence, architecture or memory: thresholds, coastlines, interiors, passages and structures that seem to retain time.",
         "Human Traces": "Figures, gestures and presences observed with distance. These images focus on residue, posture, labour and quiet encounter rather than spectacle.",
         "Ritual Spaces": "Spaces shaped by repetition, belief and inherited gesture: catacombs, domestic rooms, symbolic interiors and ceremonial sites.",
