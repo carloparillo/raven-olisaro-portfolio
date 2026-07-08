@@ -918,6 +918,173 @@
         padding: 72px 0 70px;
       }
     }
+  
+    /* Spatial Archive layer: restrained 2.5D treatment. */
+    .spatial-note {
+      display: grid;
+      grid-template-columns: minmax(130px, .28fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+      max-width: 920px;
+      margin: 0 0 18px;
+      padding: 16px 0 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .spatial-note span {
+      color: var(--dim);
+      font-size: 11px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .spatial-note p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+      max-width: 720px;
+    }
+
+    .gallery {
+      columns: initial;
+      column-gap: 0;
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: clamp(14px, 1.75vw, 28px);
+      perspective: 1800px;
+      perspective-origin: 50% 26%;
+      transform-style: preserve-3d;
+      padding-top: 18px;
+      isolation: isolate;
+    }
+
+    .work {
+      grid-column: span 4;
+      margin: 0;
+      transform-style: preserve-3d;
+      transform:
+        translate3d(0, var(--spatial-y, 0px), var(--spatial-z, 0px))
+        rotateX(var(--spatial-rx, 0deg))
+        rotateY(var(--spatial-ry, 0deg));
+      transition:
+        transform .45s cubic-bezier(.2,.65,.2,1),
+        opacity .22s ease,
+        border-color .25s ease,
+        filter .25s ease;
+      will-change: transform;
+      backface-visibility: hidden;
+      box-shadow: 0 18px 54px rgba(0,0,0,.16);
+    }
+
+    .work:hover {
+      transform:
+        translate3d(0, calc(var(--spatial-y, 0px) - 4px), calc(var(--spatial-z, 0px) + 34px))
+        rotateX(var(--spatial-rx, 0deg))
+        rotateY(var(--spatial-ry, 0deg));
+      z-index: 5;
+    }
+
+    .work.is-hidden {
+      display: none;
+    }
+
+    .work:nth-child(8n+1) { grid-column: span 5; --spatial-z: 18px; --spatial-ry: -1.8deg; }
+    .work:nth-child(8n+2) { grid-column: span 3; --spatial-z: -34px; --spatial-ry: 1.4deg; }
+    .work:nth-child(8n+3) { grid-column: span 4; --spatial-z: 48px; --spatial-ry: .6deg; }
+    .work:nth-child(8n+4) { grid-column: span 4; --spatial-z: -18px; --spatial-ry: -1.2deg; }
+    .work:nth-child(8n+5) { grid-column: span 5; --spatial-z: 28px; --spatial-ry: 1.7deg; }
+    .work:nth-child(8n+6) { grid-column: span 3; --spatial-z: -42px; --spatial-ry: -1.1deg; }
+    .work:nth-child(8n+7) { grid-column: span 4; --spatial-z: 10px; --spatial-ry: 1deg; }
+    .work:nth-child(8n+8) { grid-column: span 4; --spatial-z: -26px; --spatial-ry: -.6deg; }
+
+    .image-button:focus-visible {
+      outline: 1px solid rgba(255,255,255,.5);
+      outline-offset: 4px;
+    }
+
+    .spatial-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 10px;
+      border: 0;
+      background: transparent;
+      color: var(--dim);
+      cursor: pointer;
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 0;
+    }
+
+    .spatial-toggle:hover,
+    .spatial-toggle:focus-visible {
+      color: var(--text);
+      outline: none;
+    }
+
+    body.spatial-reduced .work {
+      transform: none !important;
+    }
+
+    body.spatial-reduced .work:hover {
+      transform: translateY(-2px) !important;
+    }
+
+    @media (max-width: 1180px) {
+      .gallery {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+      }
+
+      .work,
+      .work:nth-child(n) {
+        grid-column: span 4;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .spatial-note {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        perspective: none;
+      }
+
+      .work,
+      .work:nth-child(n) {
+        grid-column: span 1;
+        transform: none !important;
+        box-shadow: none;
+      }
+
+      .work:hover {
+        transform: translateY(-2px) !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery {
+        perspective: none;
+      }
+
+      .work,
+      .work:hover,
+      .work:nth-child(n) {
+        transform: none !important;
+        transition: opacity .2s ease, border-color .2s ease;
+      }
+
+      .image-button img,
+      .work:hover .image-button img {
+        transform: none !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -937,7 +1104,7 @@
     <div class="hero-copy">
       <div class="eyebrow">The Trace Archive · Photographic project · Raven Olisaro</div>
       <h1>Places that remember.</h1>
-      <p class="hero-intro">The Trace Archive is an evolving photographic project by Raven Olisaro. It gathers thresholds, ritual spaces, human traces, urban voids and atmospheric landscapes — selected for silence, distance and emotional residue rather than chronology.</p>
+      <p class="hero-intro">The Trace Archive is an evolving spatial photographic project by Raven Olisaro. It gathers thresholds, ritual spaces, human traces, urban voids and atmospheric landscapes — selected for silence, distance and emotional residue rather than chronology.</p>
       <div class="hero-notes" aria-label="Project notes">
         <div class="hero-note">
           <span>Curatorial axis</span>
@@ -991,7 +1158,7 @@
       </div>
 
       <div class="archive-meta">
-        <div class="archive-note">The sequence begins with the most defining images of the project, then opens into related groups. Use the filters to move through the archive by category without losing the overall direction.</div>
+        <div class="archive-note">The sequence is arranged as a light spatial archive: images sit like panels in depth, moving slowly with the scroll while preserving the rhythm and clarity of the photographic project.</div>
         <div class="archive-count">38 selected works</div>
       </div>
 
@@ -1004,7 +1171,13 @@
         <button type="button" data-filter="Urban Voids">Urban Voids</button>
       </div>
 
-      <p class="filter-description" id="filter-description">Selected works ordered for atmosphere, distance and afterimage. The archive moves from manifesto images to quieter recurrences of place, figure and memory.</p>
+      
+      <div class="spatial-note" aria-label="Spatial archive note">
+        <span>Spatial reading</span>
+        <p>Scroll slowly. The archive uses depth and restrained movement to suggest rooms, thresholds and distance without turning the photographs into an effect.</p>
+      </div>
+
+      <p class="filter-description" id="filter-description">Selected works arranged as a slow spatial archive. The sequence moves from manifesto images to quieter recurrences of place, figure and memory.</p>
 
       <div class="gallery">
         <figure class="work" data-category="Atmospheres">
@@ -1366,7 +1539,7 @@
 
   <footer class="site-footer">
     <span>© <span id="year"></span> Raven Olisaro</span>
-    <span><button class="cookie-settings" type="button">Cookie settings</button></span>
+    <span><button class="cookie-settings" type="button">Cookie settings</button> · <button class="spatial-toggle" type="button" aria-pressed="false">Reduce motion</button></span>
     <span>The Trace Archive</span>
   </footer>
 
@@ -1453,8 +1626,68 @@
         yearEl.textContent = new Date().getFullYear();
       }
 
+      const SPATIAL_KEY = "traceArchiveSpatialReduced";
+      const spatialToggle = document.querySelector(".spatial-toggle");
+      const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      const setSpatialReduced = (isReduced) => {
+        document.body.classList.toggle("spatial-reduced", isReduced);
+        if (spatialToggle) {
+          spatialToggle.setAttribute("aria-pressed", String(isReduced));
+          spatialToggle.textContent = isReduced ? "Enable motion" : "Reduce motion";
+        }
+      };
+
+      const storedSpatialPreference = localStorage.getItem(SPATIAL_KEY);
+      setSpatialReduced(storedSpatialPreference === "true" || reduceMotionQuery.matches);
+
+      if (spatialToggle) {
+        spatialToggle.addEventListener("click", () => {
+          const nextValue = !document.body.classList.contains("spatial-reduced");
+          localStorage.setItem(SPATIAL_KEY, String(nextValue));
+          setSpatialReduced(nextValue);
+          updateSpatialDepth();
+        });
+      }
+
+      const updateSpatialDepth = () => {
+        const spatialWorks = document.querySelectorAll(".work:not(.is-hidden)");
+        if (document.body.classList.contains("spatial-reduced") || reduceMotionQuery.matches) {
+          spatialWorks.forEach((work) => {
+            work.style.setProperty("--spatial-y", "0px");
+            work.style.setProperty("--spatial-rx", "0deg");
+          });
+          return;
+        }
+
+        const viewportHeight = window.innerHeight || 1;
+        spatialWorks.forEach((work, index) => {
+          const rect = work.getBoundingClientRect();
+          const center = rect.top + rect.height / 2;
+          const progress = (center - viewportHeight / 2) / viewportHeight;
+          const clamped = Math.max(-1, Math.min(1, progress));
+          work.style.setProperty("--spatial-y", `${(clamped * -22).toFixed(2)}px`);
+          work.style.setProperty("--spatial-rx", `${(clamped * 1.8).toFixed(2)}deg`);
+          work.style.setProperty("--spatial-order", index);
+        });
+      };
+
+      let spatialTicking = false;
+      const requestSpatialUpdate = () => {
+        if (!spatialTicking) {
+          window.requestAnimationFrame(() => {
+            updateSpatialDepth();
+            spatialTicking = false;
+          });
+          spatialTicking = true;
+        }
+      };
+
+      window.addEventListener("scroll", requestSpatialUpdate, { passive: true });
+      window.addEventListener("resize", requestSpatialUpdate);
+
       const filterDescriptions = {
-        all: "Selected works ordered for atmosphere, distance and afterimage. The archive moves from manifesto images to quieter recurrences of place, figure and memory.",
+        all: "Selected works arranged as a slow spatial archive. The sequence moves from manifesto images to quieter recurrences of place, figure and memory.",
         "Places": "Places held by silence, architecture or memory: thresholds, coastlines, interiors, passages and structures that seem to retain time.",
         "Human Traces": "Figures, gestures and presences observed with distance. These images focus on residue, posture, labour and quiet encounter rather than spectacle.",
         "Ritual Spaces": "Spaces shaped by repetition, belief and inherited gesture: catacombs, domestic rooms, symbolic interiors and ceremonial sites.",
@@ -1481,6 +1714,8 @@
           if (filterDescriptionEl) {
             filterDescriptionEl.textContent = filterDescriptions[filter] || filterDescriptions.all;
           }
+
+          requestSpatialUpdate();
         });
       });
 

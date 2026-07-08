@@ -65,3 +65,17 @@ Previous latest update preserved:
 - `37-small-departure.jpg` — **Small Departure** — Human Traces
 - New source file: `fiat500_final_pole_removed.jpg`
 - Caption: A quiet passage through a rural edge.
+
+## Spatial archive version
+
+This package introduces a restrained 2.5D / spatial archive layer:
+
+- static GitHub Pages compatible
+- no WebGL dependency
+- SEO, filters, lightbox, cookie consent and Formspree form preserved
+- image panels arranged in depth using CSS perspective
+- slow scroll-based depth motion
+- mobile fallback to a clean single-column archive
+- `prefers-reduced-motion` respected
+- footer control: `Reduce motion` / `Enable motion`
+- spatial preference saved in `localStorage` under `traceArchiveSpatialReduced`
